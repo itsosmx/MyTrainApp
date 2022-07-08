@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    >
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        android:background="@drawable/button_appbar_bg"
+        app:fabCradleVerticalOffset="10dp"
+        tools:ignore="BottomAppBar,MissingConstraints"
+        android:layout_marginHorizontal="10dp"
+        app:backgroundTint="@color/light_dark"
+
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:backgroundTint="@color/light_dark"
+            android:id="@+id/bottom_navigation_view"
+            app:menu="@menu/button_app_bar"
+            android:background="@drawable/button_appbar_bg"
+            app:itemTextColor="@color/gray"
+            app:itemIconTint="@color/gray"
+            app:itemIconSize="35dp"
+            />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

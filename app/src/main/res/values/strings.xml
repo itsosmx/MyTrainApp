@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyTrain</string>
+    <string name="suggestions">إقتراحات</string>
+    <string name="news">أخبار اليوم</string>
+    <string name="table">مواعيد القطارات</string>
+    <string name="tracking">تتبع قطاري</string>
+    <string name="ticket">حجز تذكرة</string>
+    <string name="title">شراء تذكرة</string>
+    <string name="destination">الواجهة</string>
+    <string name="form">بني سويف</string>
+    <string name="to">القاهرة</string>
+    <string name="buying">شراء</string>
+    <string name="mn">من</string>
+    <string name="ela">إلى</string>
+    <string name="text2">  تذكرتك  </string>
+    <string name="welcom">مرحبا بك</string>
+    <string name="mytrain">MY TRAIN</string>
+    <string name="signup">إنشاء حساب</string>
+    <string name="longin">تسجيل دخول</string>
+
+</resources>

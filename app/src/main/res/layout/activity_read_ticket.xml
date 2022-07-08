@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.ReadTicket"
+    android:background="@color/dark"
+    >
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="263dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/almarai_font"
+        android:text="مسح التذكرة  "
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="286dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/rectangle_buying"
+        android:drawableLeft="@drawable/ic_baseline_fullscreen_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/almarai_font"
+        android:gravity="center"
+        android:text="مسح التذكرة "
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="388dp"
+        android:layout_height="325dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/photo_scan"
+        tools:layout_editor_absoluteY="163dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
