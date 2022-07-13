@@ -44,7 +44,6 @@
         android:drawableEnd="@drawable/icon_security"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/almarai_font"
         />
     <Button
         android:id="@+id/b_submit"
