@@ -31,7 +31,6 @@
         android:drawableEnd="@drawable/icon_email"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="60dp"
-        android:fontFamily="@font/almarai_font"
         />
     <EditText
         android:id="@+id/et_password_input"
