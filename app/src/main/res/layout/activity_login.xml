@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="تسجيل دخول"
-        android:fontFamily="@font/almarai_font"
         android:textColor="@color/white"
         android:textSize="45sp"
         android:textAlignment="center"
