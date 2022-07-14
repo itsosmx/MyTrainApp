@@ -42,8 +42,6 @@ class Login : AppCompatActivity() {
         //Go to Sign Up screen on click
         formSignUp.setOnClickListener {
             Navigation().Navigate(this, Signup::class.java)
-//            val intent = Intent(this, Signup::class.java)
-//            startActivity(intent)
         }
 
         formSubmit.setOnClickListener {
@@ -57,6 +55,7 @@ class Login : AppCompatActivity() {
         if (currentUser != null) {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
