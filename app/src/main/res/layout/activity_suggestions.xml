@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark"
-    tools:context=".Suggestions">
+    android:gravity="center_horizontal"
+    >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_screen_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="78dp"
         android:fontFamily="@font/almarai_font"
         android:text="الـمـقـتـرحـــات"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="37sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +29,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/etTypeHere"
+        android:layout_alignEnd="@+id/etTypeHere"
         android:layout_marginTop="36dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="18dp"
         android:fontFamily="@font/almarai_font"
         android:text="عبر عن رأيك او قدم شكوي"
         android:textColor="@color/white"
@@ -34,33 +41,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.823"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_screen_title"
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="339dp"
         android:layout_height="148dp"
-        android:layout_marginTop="500dp"
+        android:layout_below="@+id/tv_screen_title"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="-7dp"
         android:fontFamily="@font/almarai_font"
         android:text="او عن طريق الايميل التالي :  blue12stars@gmail.com"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textAlignment="center"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/submit"
         android:layout_width="224dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="112dp"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="-61dp"
         android:background="@drawable/rectangle_buying"
         android:fontFamily="@font/almarai_font"
         android:gravity="center"
+        android:onClick="onClickButton"
         android:text="إرسال "
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -72,16 +86,17 @@
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <EditText
-        android:id="@+id/textView3"
+        android:id="@+id/etTypeHere"
         android:layout_width="356dp"
         android:layout_height="159dp"
-        android:layout_marginBottom="72dp"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_marginBottom="227dp"
         android:background="@color/white"
         android:fontFamily="@font/almarai_font"
-        android:text="  ابدأ الكتابة "
+        android:hint="  ابدأ الكتابة "
         android:textColor="#35383F"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,4 +105,4 @@
         tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints,TextFields" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

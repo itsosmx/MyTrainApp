@@ -11,28 +11,27 @@
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:fabCradleMargin="10dp"
+        android:backgroundTint="#00000000"
         app:fabCradleRoundedCornerRadius="10dp"
-        android:background="@drawable/button_appbar_bg"
         app:fabCradleVerticalOffset="10dp"
-        tools:ignore="BottomAppBar,MissingConstraints"
-        android:layout_marginHorizontal="10dp"
-        app:backgroundTint="@color/light_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         >
 
-        >
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            app:backgroundTint="@color/light_dark"
-            android:id="@+id/bottom_navigation_view"
-            app:menu="@menu/button_app_bar"
             android:background="@drawable/button_appbar_bg"
-            app:itemTextColor="@color/gray"
-            app:itemIconTint="@color/gray"
+            app:backgroundTint="@color/light_dark"
             app:itemIconSize="35dp"
-            />
+            app:itemIconTint="@color/gray"
+            app:itemTextColor="@color/gray"
+            app:menu="@menu/button_app_bar" />
+
+
     </com.google.android.material.bottomappbar.BottomAppBar>
 
 

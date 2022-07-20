@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/button.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/button_appbar_bg.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/buttton1.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/circle.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/circle2.xml" value="0.2579908675799087" />
@@ -11,8 +12,12 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/ic_baseline_perm_identity_24.xml" value="0.1439814814814815" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/ic_baseline_security_24.xml" value="0.1505" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/icon_email.xml" value="0.1" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/icon_security.xml" value="0.1" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/input_bg.xml" value="0.1439814814814815" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/rectangle.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/buttom_appbar_bg.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/button_appbar_bg.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/button_bg.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/button_bg_left.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1505" />
@@ -22,10 +27,15 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_local_offer_24.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_place_24.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_notification.xml" value="0.1" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_train.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/rectangle_buying.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/shape_circle_no_borders.xml" value="0.163" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/shape_corner_button.xml" value="0.1005" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/user_profile_bg.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/font/almarai.xml" value="0.27031963470319637" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_admin_profile.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_base.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_buy_ticket.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_login.xml" value="0.24722222222222223" />
@@ -42,7 +52,12 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_user_settings.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_welcome.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/app_buttom_bar.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/app_drawer_nav_header.xml" value="0.2462962962962963" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/app_drawer_navigation.xml" value="0.2115036231884058" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/component_loading.xml" value="0.21105072463768115" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/buttom_app_bar.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/button_app_bar.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/navigation_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

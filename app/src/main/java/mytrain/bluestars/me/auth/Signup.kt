@@ -56,7 +56,14 @@ class Signup : AppCompatActivity() {
                         startActivity(intent)
                         Toast.makeText(this@Signup, "Account created!", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this@Signup, "Sorry, something went wrong", Toast.LENGTH_SHORT).show()
+                        var message = ""
+                        val errorMessage = response.exception.toString()
+                        if (errorMessage.contains("password")) {
+                            message = "Invalid password"
+                        } else if (errorMessage.contains("email")) {
+                            message = "Invalid email"
+                        }
+                        Toast.makeText(this@Signup, message, Toast.LENGTH_SHORT).show()
                     }
                 }
         } catch (e: Exception) {

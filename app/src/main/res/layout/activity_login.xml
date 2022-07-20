@@ -43,6 +43,7 @@
         android:drawablePadding="20dp"
         android:inputType="textPassword"
         android:hint="كلمة السر"
+        android:textAlignment="textEnd"
         android:drawableEnd="@drawable/icon_security"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
@@ -59,7 +60,20 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_below="@+id/et_password_input"
-        android:onClick="onClickButton"
+
+        />
+    <TextView
+        android:id="@+id/b_forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="هل نسيت كلمة السر ؟"
+        android:background="@color/dark"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_below="@+id/b_submit"
         />
     <Button
         android:id="@+id/b_to_signup"
@@ -68,11 +82,12 @@
         android:padding="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="30dp"
-        android:text="ليس لديك حساب؟ إنشاء حساب"
+        android:text="إنشاء حساب"
         android:background="@color/dark"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:layout_below="@+id/b_submit"
+        android:layout_below="@+id/b_forget_password"
+        style="?android:attr/borderlessButtonStyle"
         />
         <TextView
             android:id="@+id/tv_or"

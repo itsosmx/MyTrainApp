@@ -2,6 +2,7 @@ package mytrain.bluestars.me.components
 
 import android.app.Activity
 import android.content.Intent
+import android.widget.Toast
 
 class Navigation {
     /**
@@ -14,5 +15,9 @@ class Navigation {
         val intent = Intent(context, to)
         context.startActivity(intent)
         context.finish()
+    }
+
+    fun Message(context: Activity, message: String) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 }

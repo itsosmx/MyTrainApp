@@ -57,6 +57,7 @@
         android:background="@color/white"
         android:padding="15dp"
         android:drawablePadding="20dp"
+        android:textAlignment="textEnd"
         android:hint="كلمة السر"
         android:drawableEnd="@drawable/icon_security"
         android:layout_marginHorizontal="30dp"
@@ -86,6 +87,7 @@
         android:text="لديك حساب بالفعل! تسجيل دخول"
         android:background="@color/dark"
         android:textColor="@color/white"
+        style="?android:attr/borderlessButtonStyle"
         android:textSize="15sp"
         android:layout_below="@+id/b_submit"
         />

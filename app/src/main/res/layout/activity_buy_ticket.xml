@@ -13,7 +13,6 @@
         android:layout_width="334dp"
         android:layout_height="60dp"
         android:background="@color/white"
-
         android:fontFamily="@font/almarai_font"
         android:text="الدرجة"
         android:textColor="@color/black"
