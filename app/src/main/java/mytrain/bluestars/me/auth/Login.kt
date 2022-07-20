@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import mytrain.bluestars.me.Home
 import mytrain.bluestars.me.R
+import mytrain.bluestars.me.components.LoadingDialog
 import mytrain.bluestars.me.components.Navigation
 
 
@@ -22,6 +23,7 @@ class Login : AppCompatActivity() {
     private lateinit var formPassword: EditText
     private lateinit var formSubmit: Button
     private lateinit var formSignUp: Button
+    private lateinit var loading: LoadingDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +37,7 @@ class Login : AppCompatActivity() {
         formPassword = findViewById(R.id.et_password_input)
         formSubmit = findViewById(R.id.b_submit)
         formSignUp = findViewById(R.id.b_to_signup)
-
+        loading = LoadingDialog(this)
 
 
 
@@ -48,33 +50,28 @@ class Login : AppCompatActivity() {
             onLogin("local", formEmail.text.toString(), formPassword.text.toString())
         }
     }
-    // Check if the user logged and send him to Home if true
-    public override fun onStart() {
-        super.onStart()
-        val currentUser = fAuth.currentUser
-        if (currentUser != null) {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
-            finish()
-        }
-    }
 
     private fun onLogin(type: String, email: String, password: String) {
         try {
             if (type == "local") {
+                loading.startLoading()
                 fAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) {
                         response ->
                         if (response.isSuccessful) {
+
                             val intent = Intent(this, Home::class.java)
                             finish()
                             startActivity(intent)
+                            loading.endLoading()
                         } else {
+                            loading.endLoading()
                             Toast.makeText(this@Login, "Sorry, something went wrong", Toast.LENGTH_SHORT).show()
                         }
                     }
             }
         } catch (e: Exception) {
+            loading.endLoading()
             Toast.makeText(this@Login, "Sorry, something went wrong", Toast.LENGTH_SHORT).show()
         }
     }
