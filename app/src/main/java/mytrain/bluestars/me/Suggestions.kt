@@ -26,7 +26,7 @@ class Suggestions : BaseActivity() {
         fAuth = FirebaseAuth.getInstance()
         loading = LoadingDialog(this)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("suggetion")
+        dbRef = FirebaseDatabase.getInstance().getReference()
         submit.setOnClickListener {
             saveEmployeeData()
 
