@@ -2,6 +2,7 @@ package mytrain.bluestars.me
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -14,6 +15,18 @@ import mytrain.bluestars.me.components.Navigation
 open class BaseActivity : AppCompatActivity() {
     private lateinit var fAuth: FirebaseAuth
     private lateinit var loading: LoadingDialog
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         loading = LoadingDialog(this)
         fAuth = FirebaseAuth.getInstance()
