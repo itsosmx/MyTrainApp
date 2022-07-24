@@ -1,5 +1,6 @@
 package mytrain.bluestars.me
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -20,8 +21,8 @@ class Home: BaseActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
         supportActionBar?.title = "Home"
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         fAuth = FirebaseAuth.getInstance()
 
@@ -32,19 +33,20 @@ class Home: BaseActivity()  {
         btn_suggestions = findViewById(R.id.btn_suggestions)
 
         btn_buy_ticket.setOnClickListener {
-            Navigation().Navigate(this, BuyTicket::class.java)
+            Navigation().Navigate(this@Home, BuyTicket::class.java)
         }
         btn_track.setOnClickListener {
-            Navigation().Navigate(this, Map::class.java)
+            Navigation().Navigate(this@Home, Map::class.java)
+//            val intent = Intent(this@Home, Map::class.java)
         }
         btn_inquiry.setOnClickListener {
-            Navigation().Navigate(this, Enquiry::class.java)
+            Navigation().Message(this@Home, "No screen for this")
         }
         btn_news.setOnClickListener {
-            Navigation().Navigate(this, News::class.java)
+            Navigation().Navigate(this@Home, News::class.java)
         }
         btn_suggestions.setOnClickListener {
-            Navigation().Navigate(this, Suggestions::class.java)
+            Navigation().Navigate(this@Home, Suggestions::class.java)
         }
     }
 }
