@@ -19,40 +19,44 @@
         android:textAlignment="center"
         />
 
-    <TextView
-        android:id="@+id/tv_info"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/tv_screen_title"
-        android:text="عبر عن رأيك او قدم شكوي"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
-        />
-    <EditText
-        android:id="@+id/et_content_input"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/tv_info"
-        android:background="@color/white"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
-        android:hint="رسالتك"
-        android:padding="10dp"
-        android:inputType="textMultiLine"
-        />
-    <Button
-        android:id="@+id/b_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_corner_button"
-        android:text="إرسال"
-        android:layout_below="@+id/et_content_input"
-        android:textColor="@color/white"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="50dp"
-        android:textSize="20sp"
-        />
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="عبر عن رأيك او قدم شكوي"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_content_input"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tv_info"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:hint="رسالتك"
+            android:inputType="textMultiLine"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/b_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_content_input"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/shape_corner_button"
+            android:text="إرسال"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
 </RelativeLayout>

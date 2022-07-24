@@ -47,7 +47,8 @@ class Suggestions : BaseActivity() {
                 .addOnSuccessListener {
                     Navigation().Message(this, "Your message has been sent successfully")
                     et_content_input.text.clear()
-                }.addOnFailureListener{
+                }
+                .addOnFailureListener {
                     Navigation().Message(this, "Sorry, something went wrong.")
                 }
         }
