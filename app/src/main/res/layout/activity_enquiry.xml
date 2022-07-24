@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    app:circularflow_defaultRadius="15dp"
+
+    tools:context=".payment.BuyTicket">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_screen_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="إستعلام"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+
+            <Spinner
+                android:id="@+id/s_travel_place"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/tv_screen_title"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="60dp"
+                android:background="@color/light_dark"
+                android:backgroundTint="@color/white"
+                android:popupBackground="@color/white" />
+            <TextView
+                android:id="@+id/tv_travel"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/tv_screen_title"
+                android:text="محطة القيام"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+            <Spinner
+                android:id="@+id/s_arrive_place"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/s_travel_place"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/light_dark"
+                android:backgroundTint="@color/white"
+                android:popupBackground="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_arrive"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/tv_travel"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="25dp"
+                android:layoutDirection="rtl"
+                android:text="محطة الوصول"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <DatePicker
+                android:id="@+id/et_travel_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/s_arrive_place"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/white"
+                android:calendarTextColor="@color/white"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:drawableLeft="@drawable/table"
+                android:textSize="20sp"
+                app:circularflow_radiusInDP="20dp" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/s_arrive_place"
+                android:text="تاريخ السفر"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <Spinner
+                android:id="@+id/s_traveller_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/et_travel_date"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/white"
+                android:layoutDirection="rtl"
+                android:popupBackground="@color/white" />
+
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/et_travel_date"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="0dp"
+                android:layoutDirection="rtl"
+                android:text="عدد المسافرين"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/s_ticket_degree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/s_traveller_number"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/white"
+                android:popupBackground="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_degree"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/s_traveller_number"
+                android:text="الدرجة"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <Spinner
+                android:id="@+id/s_travel_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/s_ticket_degree"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/white"
+                android:popupBackground="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/s_ticket_degree"
+                android:text="توقيت السفر"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <Button
+                android:id="@+id/b_next"
+                android:layout_width="280sp"
+                android:layout_height="49sp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/blue"
+                android:text="بحث"
+                android:textColor="@color/white"
+                android:layout_below="@+id/s_travel_time"
+                android:textSize="20sp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="40dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

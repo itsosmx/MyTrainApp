@@ -21,6 +21,7 @@ class Suggestions : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_suggestions)
+
         submit = findViewById(R.id.submit)
         etTypeHere = findViewById(R.id.etTypeHere)
         fAuth = FirebaseAuth.getInstance()

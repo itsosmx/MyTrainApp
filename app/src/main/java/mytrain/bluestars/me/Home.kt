@@ -38,7 +38,7 @@ class Home: BaseActivity()  {
             Navigation().Navigate(this, Map::class.java)
         }
         btn_inquiry.setOnClickListener {
-            Navigation().Message(this, "No screen for this")
+            Navigation().Navigate(this, Enquiry::class.java)
         }
         btn_news.setOnClickListener {
             Navigation().Navigate(this, News::class.java)

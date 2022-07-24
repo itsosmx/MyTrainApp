@@ -1,0 +1,52 @@
+[
+  {
+    "gov": "cairo",
+    "stations": [
+      {
+        "gov": "benisuef",
+        "trains": [
+          {
+            "id": 934,
+            "type": "Special Service",
+            "departureTime": "01:10 AM",
+            "arrivalTime": "02:53 AM",
+            "isArrivalSameDate": true,
+            "price": 67.6,
+            "class": "AC 2"
+          },
+          {
+            "id": 934,
+            "type": "Special Service",
+            "departureTime": "01:10 AM",
+            "arrivalTime": "02:53 AM",
+            "isArrivalSameDate": true,
+            "price": 67.6,
+            "class": "AC 2"
+          },
+          {
+            "id": 934,
+            "type": "Special Service",
+            "departureTime": "01:10 AM",
+            "arrivalTime": "02:53 AM",
+            "isArrivalSameDate": true,
+            "price": 67.6,
+            "class": "AC 2"
+          },
+          {
+            "id": 934,
+            "type": "Special Service",
+            "departureTime": "01:10 AM",
+            "arrivalTime": "02:53 AM",
+            "isArrivalSameDate": true,
+            "price": 67.6,
+            "class": "AC 2"
+          }
+        ]
+      },
+      {
+        "gov": "alexandria",
+        "trains": []
+      }
+    ]
+  }
+]

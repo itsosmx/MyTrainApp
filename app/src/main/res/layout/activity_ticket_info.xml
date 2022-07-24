@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment.TicketInfo"
     android:background="@color/dark"
+    app:circularflow_defaultRadius="15dp"
+    tools:context=".payment.TicketInfo"
     >
 
     <TextView
-        android:layout_width="271dp"
-        android:layout_height="97dp"
-        android:layout_marginHorizontal="50dp"
-        android:fontFamily="@font/almarai_font"
-        android:gravity="center"
-        android:text="@string/destination"
+        android:id="@+id/tv_screen_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="شراء  تذكرة"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="317dp" />
+        android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/price"
+        android:id="@+id/circle"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_below="@+id/tv_screen_title"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
         android:background="@drawable/circle"
         android:gravity="center"
         android:minWidth="100dp"
         android:padding="100dp"
         tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteX="216dp"
         tools:layout_editor_absoluteY="137dp" />
 
+
     <TextView
+        android:id="@+id/tv_egp"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:fontFamily="@font/almarai_font"
+        android:layout_below="@+id/tv_screen_title"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="120dp"
         android:gravity="center"
         android:text="00.00 EGP"
         android:textColor="@color/white"
@@ -45,46 +53,41 @@
         tools:layout_editor_absoluteX="141dp"
         tools:layout_editor_absoluteY="160dp" />
 
-    <TextView
-        android:layout_width="271dp"
-        android:layout_height="97dp"
-        android:layout_marginHorizontal="50dp"
-        android:fontFamily="@font/almarai_font"
-        android:gravity="center"
-        android:text="@string/title"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="40dp" />
 
-    <EditText
-        android:id="@+id/from"
+    <TextView
+        android:id="@+id/tv_face"
+        android:layout_below="@+id/tv_egp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="الوجهه"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_from"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:text="بني سويف"
+        android:layout_below="@+id/tv_face"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="100dp"
         android:background="@drawable/rectangle"
-        android:gravity="center"
-        android:minWidth="150dp"
-        android:padding="500dp"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="413dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/form"
         android:textColor="@color/white"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/almarai_font"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="410dp" />
+        android:gravity="center"
+        android:textSize="20sp"
+         />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_face"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="300dp"
         android:fontFamily="@font/almarai_font"
         android:gravity="center"
         android:paddingLeft="20dp"
@@ -95,95 +98,50 @@
         tools:layout_editor_absoluteX="341dp"
         tools:layout_editor_absoluteY="414dp" />
 
-    <EditText
-        android:id="@+id/to"
+    <TextView
+        android:id="@+id/tv_to"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_below="@+id/tv_face"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="110sp"
+        android:layout_marginEnd="100dp"
         android:background="@drawable/rectangle"
         android:gravity="center"
-        android:minWidth="150dp"
-        android:padding="500dp"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="495dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to"
+        android:text="القاهرة"
         android:textColor="@color/white"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/almarai_font"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="495dp" />
+        android:textSize="20sp" />
 
 
     <TextView
-        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="252dp"
+        android:layout_below="@+id/tv_face"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="110sp"
+        android:layout_marginEnd="300dp"
         android:fontFamily="@font/almarai_font"
         android:gravity="center"
         android:paddingLeft="20dp"
         android:text="@string/ela"
         android:textColor="@color/white"
         android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="341dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/but_buying"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="414dp" />
 
 
-        android:background="@drawable/rectangle_buying"
-
-        android:fontFamily="@font/almarai_font"
-        android:gravity="center"
-        android:text="@string/buying"
-        android:textSize="20dp"
+    <Button
+        android:id="@+id/b_next"
+        android:layout_width="280sp"
+        android:layout_height="49sp"
+        android:layout_below="@+id/tv_to"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/blue"
+        android:text="التالي"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="580dp" />
+        android:textSize="20sp" />
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginHorizontal="10dp"
-        android:background="@drawable/button_appbar_bg"
-        app:backgroundTint="@color/light_dark"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="10dp"
-        app:fabCradleVerticalOffset="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="BottomAppBar,MissingConstraints"
-
-        tools:layout_editor_absoluteX="9dp">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation_view"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@drawable/button_appbar_bg"
-            app:backgroundTint="@color/light_dark"
-            app:itemIconSize="35dp"
-
-            app:itemIconTint="@color/gray"
-
-            app:itemTextColor="@color/gray"
-            app:menu="@menu/button_app_bar" />
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

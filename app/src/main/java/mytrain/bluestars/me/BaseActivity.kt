@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import mytrain.bluestars.me.auth.Login
 import mytrain.bluestars.me.components.LoadingDialog
 import mytrain.bluestars.me.components.Navigation
+import mytrain.bluestars.me.payment.BuyTicket
 
 open class BaseActivity : AppCompatActivity() {
     private lateinit var fAuth: FirebaseAuth
@@ -22,7 +23,7 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        loading.startLoading()
+//        loading.startLoading()
         return when (item.itemId) {
             R.id.nav_notification -> {
                 Toast.makeText(this, "No screen for this", Toast.LENGTH_SHORT).show()
@@ -34,7 +35,7 @@ open class BaseActivity : AppCompatActivity() {
                 true
             }
             R.id.nav_buy_ticket -> {
-                Toast.makeText(this, "No screen for this", Toast.LENGTH_SHORT).show()
+                Navigation().Navigate(this, BuyTicket::class.java)
                 true
             }
             R.id.nav_my_ticket -> {

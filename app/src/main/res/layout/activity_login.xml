@@ -24,15 +24,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_screen_title"
-        android:background="@color/white"
-        android:drawablePadding="20dp"
-        android:padding="15dp"
-        android:hint="البريد الالكتروني"
-        android:drawableEnd="@drawable/icon_email"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="60dp"
+        android:background="@color/white"
+        android:drawableEnd="@drawable/icon_email"
+        android:drawablePadding="20dp"
+        android:hint="البريد الالكتروني"
         android:inputType="textEmailAddress"
-        />
+        android:padding="15dp" />
     <EditText
         android:id="@+id/et_password_input"
         android:layout_width="match_parent"

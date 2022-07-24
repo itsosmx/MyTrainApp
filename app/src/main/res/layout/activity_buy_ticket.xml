@@ -6,219 +6,182 @@
     android:layout_height="match_parent"
     android:background="@color/dark"
     app:circularflow_defaultRadius="15dp"
-
     tools:context=".payment.BuyTicket">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tv_screen_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:text="حجز تذكرة"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30sp" />
 
-    <EditText
-        android:id="@+id/editText6"
+
+    <Spinner
+        android:id="@+id/s_travel_place"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/tv_screen_title"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="٠dp"
-        android:layout_marginBottom="٠dp"
-        android:background="@color/white"
-        android:fontFamily="@font/almarai_font"
-        android:text="نوع القطار "
-        android:textColor="@color/black"
+        android:layout_marginTop="60dp"
+        android:background="@color/light_dark"
+        android:backgroundTint="@color/white"
+        android:popupBackground="@color/white" />
+    <TextView
+        android:id="@+id/tv_travel"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/tv_screen_title"
+        android:text="محطة القيام"
         android:textSize="20sp"
-        android:textStyle="bold" />
-    <!--
-        <Switch
-            android:id="@+id/switch2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="٠dp"
-            android:layout_marginBottom="٠dp"
-            android:text="صباحاً"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/button6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"
-            app:layout_constraintVertical_bias="0.807"
-            tools:ignore="HardcodedText,SpUsage,UseSwitchCompatOrMaterialXml" />
-
-        <Switch
-            android:id="@+id/switch3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="٣٢dp"
-            android:layout_marginBottom="٠dp"
-            android:text="مساءاًً"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/button6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.159"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"
-            app:layout_constraintVertical_bias="0.807"
-            tools:ignore="HardcodedText,SpUsage,UseSwitchCompatOrMaterialXml" />
-
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-
-            android:layout_marginTop="٠dp"
-            android:layout_marginBottom="٠dp"
-            android:background="@color/white"
-            android:fontFamily="@font/almarai_font"
-            android:text="الدرجة"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:circularflow_radiusInDP="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.636"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText3"
-            app:layout_constraintVertical_bias="0.079"
-            tools:ignore="HardcodedText,MissingConstraints" />
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-
-            android:background="@color/white"
-            android:fontFamily="@font/almarai_font"
-            android:text="عدد المسافرين"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:circularflow_radiusInDP="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.636"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-
-            android:background="@color/white"
-            android:drawableLeft="@drawable/table"
-            android:fontFamily="@font/almarai_font"
-            android:text="تاريخ السفر"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:circularflow_radiusInDP="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.636"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.375"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-
-            android:layout_marginTop="٠dp"
-            android:layout_marginBottom="٤٨dp"
-            android:background="@color/white"
-            android:fontFamily="@font/almarai_font"
-            android:text="الوجهة"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:circularflow_radiusInDP="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.636"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText5"
-            app:layout_constraintVertical_bias="0.585"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-
-            android:layout_marginTop="٣٦dp"
-            android:layout_marginBottom="٠dp"
-            android:background="@color/white"
-            android:fontFamily="@font/almarai_font"
-            android:text="مكان المغادرة"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:circularflow_radiusInDP="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.636"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.052"
-            tools:ignore="MissingConstraints" />
+        android:textColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+    <Spinner
+        android:id="@+id/s_arrive_place"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/s_travel_place"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/light_dark"
+        android:backgroundTint="@color/white"
+        android:popupBackground="@color/white" />
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="171dp"
-            android:layout_height="59dp"
-            android:layout_marginTop="٠dp"
-            android:fontFamily="@font/almarai_font"
-            android:text="حجز تذكرة"
-            android:textColor="#FFFFFF"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            android:id="@+id/tv_arrive"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tv_travel"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
+            android:layoutDirection="rtl"
+            android:text="محطة الوصول"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="280sp"
-            android:layout_height="49sp"
-            android:background="@color/blue"
-            android:text="حجز"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.936" />
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
+        <DatePicker
+            android:id="@+id/et_travel_date"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="٣٢dp"
-            android:layout_marginBottom="٠dp"
-            android:text="غير محدد"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/button6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.944"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"
-            app:layout_constraintVertical_bias="0.807"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-        !-->
+            android:layout_below="@+id/s_arrive_place"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/white"
+            android:calendarTextColor="@color/white"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:drawableLeft="@drawable/table"
+            android:textSize="20sp"
+            app:circularflow_radiusInDP="20dp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/s_arrive_place"
+        android:text="تاريخ السفر"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+        <Spinner
+            android:id="@+id/s_traveller_number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/et_travel_date"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/white"
+            android:layoutDirection="rtl"
+            android:popupBackground="@color/white" />
+
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/et_travel_date"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="-٢٩٥dp"
+            android:layoutDirection="rtl"
+            android:text="عدد المسافرين"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <Spinner
+        android:id="@+id/s_ticket_degree"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/s_traveller_number"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/white"
+        android:popupBackground="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_degree"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/s_traveller_number"
+        android:text="الدرجة"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <Spinner
+        android:id="@+id/s_travel_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/s_ticket_degree"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/white"
+        android:popupBackground="@color/white"/>
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:layoutDirection="rtl"
+        android:layout_below="@+id/s_ticket_degree"
+        android:text="توقيت السفر"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <Button
+        android:id="@+id/b_next"
+        android:layout_width="280sp"
+        android:layout_height="49sp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/blue"
+        android:text="التالي"
+        android:textColor="@color/white"
+        android:layout_below="@+id/s_travel_time"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="40dp"/>
+    </RelativeLayout>
+</ScrollView>
+
 </RelativeLayout>

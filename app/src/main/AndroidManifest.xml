@@ -10,12 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTrain">
         <activity
-            android:name=".BaseActivity"
+            android:name=".Enquiry"
             android:exported="false" />
         <activity
             android:name=".Welcome"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,61 +23,49 @@
         </activity>
         <activity
             android:name=".payment.BuyTicket"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".Suggestions"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+            android:exported="false" />
         <activity
             android:name=".News"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".user.UserSettings"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".admin.ReadTicket"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".admin.AdminProfile"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".UserProfile"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".QrTicket"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+            android:exported="false" />
         <activity
             android:name=".payment.TicketInfo"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".payment.PaymentMethod"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".Map"
-            android:parentActivityName=".Home"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize"
-             />
+            android:exported="false"
+            />
         <activity
             android:name=".auth.Signup"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:exported="false" />
         <activity
             android:name=".auth.Login"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize">
+        </activity>
         <activity
             android:name=".Home"
-            android:exported="false" />
+            android:exported="true" />
     </application>
 
 </manifest>
