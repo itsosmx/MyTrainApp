@@ -20,10 +20,14 @@ class Welcome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
+
+
         btn_signup = findViewById(R.id.btn_signup)
         btn_login = findViewById(R.id.btn_login)
         fAuth = FirebaseAuth.getInstance()
         loading = LoadingDialog(this)
+
+
         btn_signup.setOnClickListener {
             Navigation().Navigate(this, Signup::class.java)
         }
@@ -36,9 +40,13 @@ class Welcome : AppCompatActivity() {
     public override fun onStart() {
         super.onStart()
         loading.startLoading()
-        val currentUser = fAuth.currentUser
-        if (currentUser != null) {
-            Navigation().Navigate(this, Home::class.java)
+        FirebaseAuth.AuthStateListener {
+            user ->
+                if (user != null) {
+                    Navigation().Navigate(this@Welcome, Home::class.java)
+                } else {
+                    Navigation().Navigate(this@Welcome, Login::class.java)
+                }
         }
         loading.endLoading()
     }

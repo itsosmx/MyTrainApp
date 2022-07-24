@@ -116,7 +116,6 @@
             android:layout_height="60dp"
             android:layout_below="@+id/et_travel_date"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="-٢٩٥dp"
             android:layoutDirection="rtl"
             android:text="عدد المسافرين"
             android:textColor="@color/blue"

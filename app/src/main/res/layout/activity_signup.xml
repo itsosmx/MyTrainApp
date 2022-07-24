@@ -46,7 +46,6 @@
         android:drawableEnd="@drawable/icon_email"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/almarai_font"
         />
     <EditText
         android:inputType="textPassword"
@@ -55,14 +54,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_email_input"
         android:background="@color/white"
-        android:padding="15dp"
         android:drawablePadding="20dp"
-        android:textAlignment="textEnd"
+        android:padding="15dp"
         android:hint="كلمة السر"
         android:drawableEnd="@drawable/icon_security"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/almarai_font"
         />
     <Button
         android:id="@+id/b_submit"

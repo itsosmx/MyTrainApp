@@ -1,6 +1,6 @@
 package mytrain.bluestars.me.data
 
 data class SuggestionsData (
-    var TypeHere: String ?= null,
-    var empId:String ?=null
+    var content: String ?= null,
+    var uid:String ?=null
 )
