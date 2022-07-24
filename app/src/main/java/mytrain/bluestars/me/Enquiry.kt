@@ -1,29 +1,25 @@
-package mytrain.bluestars.me.payment
+package mytrain.bluestars.me
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.*
-import androidx.core.view.get
-import mytrain.bluestars.me.R
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.DatePicker
+import android.widget.Spinner
+import mytrain.bluestars.me.payment.TicketInfo
 
-class BuyTicket : AppCompatActivity() {
+class Enquiry : BaseActivity() {
     val traveller = arrayOf("اختر عدد المسافرين",1,2,3,4)
     val travel_time = arrayOf("اختر توقيت السفر ","صباحاً","مساءاً")
-    private lateinit var b_next: Button
-    lateinit var dateEdt: EditText
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_buy_ticket)
-
-        b_next = findViewById(R.id.b_next)
+        setContentView(R.layout.activity_enquiry)
 
 
         val s_travel_place =findViewById<Spinner>(R.id.s_travel_place)
         val s_arrive_place =findViewById<Spinner>(R.id.s_arrive_place)
-        val et_travel_date =findViewById<DatePicker>(R.id.et_travel_date)
 
 
 
@@ -89,22 +85,8 @@ class BuyTicket : AppCompatActivity() {
 
 
 
-        b_next.setOnClickListener {
-            val intent = Intent(this@BuyTicket, TicketInfo::class.java)
-            intent.putExtra("from", s_travel_place.selectedItem.toString())
-            intent.putExtra("to",s_arrive_place.selectedItem.toString())
-            //intent.putExtra("date",et_travel_date.)
-            intent.putExtra("traveler_number",s_traveller_number.selectedItem.toString())
-            intent.putExtra("ticket_degree",s_ticket_degree.selectedItem.toString())
-            intent.putExtra("travel_time",s_travel_time.selectedItem.toString())
-            startActivity(intent)
-        }
-
-
-
-
-
 
 
     }
+
 }

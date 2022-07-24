@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ticket_degree">
+        <item>"اختر الدرجة"</item>
+        <item>مميز</item>
+        <item>تحيا مصر</item>
+        <item>روسي</item>
+        <item>اسباني</item>
+        <item>ثانية مكيف</item>
+        <item>اولي مكيف</item>
+        <item>ثانية VIP</item>
+        <item>اولي VIP</item>
+    </string-array>
+</resources>
