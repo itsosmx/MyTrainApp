@@ -7,7 +7,7 @@
     android:background="@color/dark"
     app:circularflow_defaultRadius="15dp"
 
-    tools:context=".payment.BuyTicket">
+    tools:context=".Enquiry">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -71,7 +71,7 @@
                 android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-            <DatePicker
+            <EditText
                 android:id="@+id/et_travel_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,8 +81,13 @@
                 android:background="@color/white"
                 android:calendarTextColor="@color/white"
                 android:calendarViewShown="false"
+                android:clickable="false"
+                android:cursorVisible="false"
                 android:datePickerMode="spinner"
                 android:drawableLeft="@drawable/table"
+                android:focusable="false"
+                android:hint=" حدد التاريخ "
+                android:paddingRight="30dp"
                 android:textSize="20sp"
                 app:circularflow_radiusInDP="20dp" />
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.google.firebase.database.*
 import mytrain.bluestars.me.R
 
 
@@ -12,13 +13,21 @@ class TicketInfo : AppCompatActivity() {
     private lateinit var tv_from: TextView
     private lateinit var tv_to:TextView
     private lateinit var b_next: Button
+    private lateinit var myName: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ticket_info)
+
+        var readData = ReadDate ()
+        var dbRef : DatabaseReference = FirebaseDatabase.getInstance().getReference("0").child("gov")
+        dbRef.addValueEventListener(readData)
+
+
 //
         b_next = findViewById(R.id.b_next)
         tv_from = findViewById(R.id.tv_from)
         tv_to = findViewById(R.id.tv_to)
+        myName =findViewById((R.id.tv_egp))
 
         val to = intent.getStringExtra("to")
         val from = intent.getStringExtra("from")
@@ -47,6 +56,17 @@ class TicketInfo : AppCompatActivity() {
         }
 
 
+
+    }
+    inner class ReadDate: ValueEventListener{
+        override fun onDataChange(p0: DataSnapshot) {
+              var name :String =p0?.getValue(String::class.java)!!
+            myName.text = name
+        }
+
+        override fun onCancelled(error: DatabaseError) {
+            TODO("Not yet implemented")
+        }
 
     }
 }

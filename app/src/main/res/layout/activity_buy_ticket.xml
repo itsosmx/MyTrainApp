@@ -71,7 +71,7 @@
             android:textColor="@color/blue"
             android:textSize="20sp" />
 
-        <DatePicker
+        <EditText
             android:id="@+id/et_travel_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,22 +81,26 @@
             android:background="@color/white"
             android:calendarTextColor="@color/white"
             android:calendarViewShown="false"
+            android:clickable="false"
+            android:cursorVisible="false"
             android:datePickerMode="spinner"
             android:drawableLeft="@drawable/table"
+            android:focusable="false"
+            android:hint=" حدد التاريخ "
             android:textSize="20sp"
             app:circularflow_radiusInDP="20dp" />
 
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
-        android:layoutDirection="rtl"
-        android:layout_below="@+id/s_arrive_place"
-        android:text="تاريخ السفر"
-        android:textSize="20sp"
-        android:textColor="@color/blue"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"/>
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/s_arrive_place"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layoutDirection="rtl"
+            android:text="تاريخ السفر"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
 
         <Spinner
             android:id="@+id/s_traveller_number"
