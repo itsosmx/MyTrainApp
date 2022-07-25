@@ -18,9 +18,9 @@ class TicketInfo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ticket_info)
 
-        var readData = ReadDate ()
-        var dbRef : DatabaseReference = FirebaseDatabase.getInstance().getReference("0").child("gov")
-        dbRef.addValueEventListener(readData)
+        //var readData = ReadDate ()
+        //var dbRef : DatabaseReference = FirebaseDatabase.getInstance().getReference("0").child("gov")
+        //dbRef.addValueEventListener(readData)
 
 
 //
