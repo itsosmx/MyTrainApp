@@ -7,23 +7,27 @@ import android.view.View
 import android.widget.*
 import androidx.core.view.get
 import mytrain.bluestars.me.R
+import android.app.DatePickerDialog
+import android.widget.EditText
+import java.util.*
+
 
 class BuyTicket : AppCompatActivity() {
     val traveller = arrayOf("اختر عدد المسافرين",1,2,3,4)
     val travel_time = arrayOf("اختر توقيت السفر ","صباحاً","مساءاً")
     private lateinit var b_next: Button
-    lateinit var dateEdt: EditText
+    lateinit var et_travel_date: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_ticket)
-
+        et_travel_date = findViewById(R.id.et_travel_date)
         b_next = findViewById(R.id.b_next)
 
 
         val s_travel_place =findViewById<Spinner>(R.id.s_travel_place)
         val s_arrive_place =findViewById<Spinner>(R.id.s_arrive_place)
-        val et_travel_date =findViewById<DatePicker>(R.id.et_travel_date)
+        //val et_travel_date =findViewById<DatePicker>(R.id.et_travel_date)
 
 
 
@@ -93,7 +97,7 @@ class BuyTicket : AppCompatActivity() {
             val intent = Intent(this@BuyTicket, TicketInfo::class.java)
             intent.putExtra("from", s_travel_place.selectedItem.toString())
             intent.putExtra("to",s_arrive_place.selectedItem.toString())
-            //intent.putExtra("date",et_travel_date.)
+            //intent.putExtra("date",et_travel_dat.)
             intent.putExtra("traveler_number",s_traveller_number.selectedItem.toString())
             intent.putExtra("ticket_degree",s_ticket_degree.selectedItem.toString())
             intent.putExtra("travel_time",s_travel_time.selectedItem.toString())
@@ -101,6 +105,39 @@ class BuyTicket : AppCompatActivity() {
         }
 
 
+        et_travel_date.setOnClickListener {
+
+            // on below line we are getting
+            // the instance of our calendar.
+            val c = Calendar.getInstance()
+
+            // on below line we are getting
+            // our day, month and year.
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+
+            // on below line we are creating a
+            // variable for date picker dialog.
+            val datePickerDialog = DatePickerDialog(
+                // on below line we are passing context.
+                this,
+                { view, year, monthOfYear, dayOfMonth ->
+                    // on below line we are setting
+                    // date to our edit text.
+                    val dat = (dayOfMonth.toString() + "-" + (monthOfYear + 1) + "-" + year)
+                    et_travel_date.setText(dat)
+                },
+                // on below line we are passing year, month
+                // and day for the selected date in our date picker.
+                year,
+                month,
+                day
+            )
+            // at last we are calling show
+            // to display our date picker dialog.
+            datePickerDialog.show()
+        }
 
 
 

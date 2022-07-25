@@ -40,7 +40,7 @@ class Home: BaseActivity()  {
 //            val intent = Intent(this@Home, Map::class.java)
         }
         btn_inquiry.setOnClickListener {
-            Navigation().Message(this@Home, "No screen for this")
+            Navigation().Navigate(this@Home, Enquiry::class.java)
         }
         btn_news.setOnClickListener {
             Navigation().Navigate(this@Home, News::class.java)

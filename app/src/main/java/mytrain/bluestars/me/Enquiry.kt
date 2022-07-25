@@ -4,18 +4,22 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.DatePicker
-import android.widget.Spinner
-import mytrain.bluestars.me.payment.TicketInfo
+import android.widget.*
+import androidx.core.view.get
+import mytrain.bluestars.me.R
+import android.app.DatePickerDialog
+import android.widget.EditText
+import java.util.*
 
 class Enquiry : BaseActivity() {
     val traveller = arrayOf("اختر عدد المسافرين",1,2,3,4)
     val travel_time = arrayOf("اختر توقيت السفر ","صباحاً","مساءاً")
+    lateinit var et_travel_date: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enquiry)
+        et_travel_date = findViewById(R.id.et_travel_date)
 
 
         val s_travel_place =findViewById<Spinner>(R.id.s_travel_place)
@@ -84,6 +88,39 @@ class Enquiry : BaseActivity() {
         }.also { s_travel_place.onItemSelectedListener = it }
 
 
+        et_travel_date.setOnClickListener {
+
+            // on below line we are getting
+            // the instance of our calendar.
+            val c = Calendar.getInstance()
+
+            // on below line we are getting
+            // our day, month and year.
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+
+            // on below line we are creating a
+            // variable for date picker dialog.
+            val datePickerDialog = DatePickerDialog(
+                // on below line we are passing context.
+                this,
+                { view, year, monthOfYear, dayOfMonth ->
+                    // on below line we are setting
+                    // date to our edit text.
+                    val dat = (dayOfMonth.toString() + "-" + (monthOfYear + 1) + "-" + year)
+                    et_travel_date.setText(dat)
+                },
+                // on below line we are passing year, month
+                // and day for the selected date in our date picker.
+                year,
+                month,
+                day
+            )
+            // at last we are calling show
+            // to display our date picker dialog.
+            datePickerDialog.show()
+        }
 
 
 

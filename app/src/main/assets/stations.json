@@ -7,7 +7,7 @@
         "trains": [
           {
             "id": 934,
-            "type": "Special Service",
+            "type": "special service",
             "departureTime": "01:10 AM",
             "arrivalTime": "02:53 AM",
             "isArrivalSameDate": true,
@@ -16,7 +16,7 @@
           },
           {
             "id": 934,
-            "type": "Special Service",
+            "type": " special service ",
             "departureTime": "01:10 AM",
             "arrivalTime": "02:53 AM",
             "isArrivalSameDate": true,
@@ -25,7 +25,7 @@
           },
           {
             "id": 934,
-            "type": "Special Service",
+            "type": "special service",
             "departureTime": "01:10 AM",
             "arrivalTime": "02:53 AM",
             "isArrivalSameDate": true,
@@ -34,7 +34,7 @@
           },
           {
             "id": 934,
-            "type": "Special Service",
+            "type": "special service",
             "departureTime": "01:10 AM",
             "arrivalTime": "02:53 AM",
             "isArrivalSameDate": true,
@@ -45,8 +45,92 @@
       },
       {
         "gov": "alexandria",
-        "trains": []
+        "trains": [
+          {
+            "id": 934 ,
+            "type": "special service",
+            "departureTime": "03:05 AM",
+            "arrivalTime": "06:00 AM",
+            "isArrivalSameDate":true ,
+            "price":71 ,
+            "class": "AC 2"
+          },
+          {
+            "id": 980 ,
+            "type": "special service",
+            "departureTime": "08:00 AM",
+            "arrivalTime": "11:15 AM",
+            "isArrivalSameDate": true,
+            "price":61.5 ,
+            "class": "AC 2"
+          },
+          {
+            "id":2010  ,
+            "type": "Air conditioning express",
+            "departureTime": "10:00 AM",
+            "arrivalTime": "01:00 BM",
+            "isArrivalSameDate":true ,
+            "price":50 ,
+            "class": "AC 2"
+          },
+          {
+            "id": 2006 ,
+            "type": "special service",
+            "departureTime": "05:00 BM",
+            "arrivalTime": "08:20 BM",
+            "isArrivalSameDate":true ,
+            "price": 73,
+            "class": "AC 2"
+          },
+          {
+            "gov": "fayoum",
+            "trains": [
+              {
+                "id": 88 ,
+                "type": "special service",
+                "departureTime": "07:30 AM",
+                "arrivalTime": "10:55 AM",
+                "isArrivalSameDate":true ,
+                "price":61 ,
+                "class": "AC 2"
+              },
+              {
+                "id": 1902 ,
+                "type": "Air conditioning express",
+                "departureTime": "10:20 AM",
+                "arrivalTime": "01:20 BM",
+                "isArrivalSameDate":true ,
+                "price":53.5 ,
+                "class": "AC 1"
+              },
+              {
+                "id": 2012 ,
+                "type": "VIP",
+                "departureTime": "03:05 AM",
+                "arrivalTime": "06:00 AM",
+                "isArrivalSameDate":true ,
+                "price":93 ,
+                "class": "AC 1"
+              },
+              {
+                "id": 2014 ,
+                "type": "VIP",
+                "departureTime": "06:40 AM",
+                "arrivalTime": "09:40 AM",
+                "isArrivalSameDate":true ,
+                "price":85.5 ,
+                "class": " AC 2"
+              }
+
+
+
+
+
+
+
+
+            ]
+          }
+        ]
       }
-    ]
-  }
-]
+    ]}]
