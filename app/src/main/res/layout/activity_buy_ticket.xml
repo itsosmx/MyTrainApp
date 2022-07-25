@@ -82,6 +82,7 @@
             android:calendarTextColor="@color/white"
             android:calendarViewShown="false"
             android:clickable="false"
+            android:layoutDirection="rtl"
             android:cursorVisible="false"
             android:datePickerMode="spinner"
             android:drawableLeft="@drawable/table"
