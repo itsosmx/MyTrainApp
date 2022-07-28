@@ -9,26 +9,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:replace="android:theme,android:supportsRtl"
-        android:theme="@style/Theme.MyTrain">
+        android:theme="@style/Theme.MyTrain"
+        tools:replace="android:theme,android:supportsRtl">
+        <activity
+            android:name=".TicketsList"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
         <activity
             android:name=".Enquiry"
-            android:exported="true"
-            />
-
+            android:exported="true" />
         <activity
             android:name=".Welcome"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
-
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".payment.BuyTicket"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Suggestions"
             android:exported="false"
@@ -37,23 +42,23 @@
         <activity
             android:name=".News"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".user.UserSettings"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".admin.ReadTicket"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".admin.AdminProfile"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".UserProfile"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".QrTicket"
             android:exported="false"
@@ -61,35 +66,28 @@
         <activity
             android:name=".payment.TicketInfo"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".payment.PaymentMethod"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Map"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize"
-             />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".auth.Signup"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".auth.Login"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Home"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:exported="true">
+
         </activity>
-            
     </application>
 
 </manifest>
