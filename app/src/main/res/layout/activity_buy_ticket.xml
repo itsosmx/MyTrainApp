@@ -137,17 +137,17 @@
         android:background="@color/white"
         android:popupBackground="@color/white" />
 
-    <TextView
-        android:id="@+id/tv_degree"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
-        android:layoutDirection="rtl"
-        android:layout_below="@+id/s_traveller_number"
-        android:text="الدرجة"
-        android:textSize="20sp"
-        android:textColor="@color/blue"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"/>
+        <TextView
+            android:id="@+id/tv_degree"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/s_traveller_number"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layoutDirection="rtl"
+            android:text="الدرجة"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/s_travel_time"
