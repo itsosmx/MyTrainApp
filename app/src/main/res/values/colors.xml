@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    //Paymob Color Theme
+    <color name="colorPrimary">#FFBB86FC</color>
+    <color name="colorPrimaryDark">#FF6200EE</color>
+    <color name="colorAccent">#FF3700B3</color>
+
     <color name="dark">#181A20</color>
     <color name="blue">#246BFD</color>
     <color name="light_dark">#35383F</color>

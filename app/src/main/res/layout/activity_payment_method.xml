@@ -9,6 +9,8 @@
     android:gravity="center"
     >
 
+
+
     <Button
         android:id="@+id/b_buy"
         android:layout_width="match_parent"
@@ -19,7 +21,10 @@
         android:text="شراء"
         android:textSize="35sp"
         android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/blue"
         />
+
     <Button
         android:id="@+id/b_cancel"
         android:layout_below="@+id/b_buy"

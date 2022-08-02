@@ -47,7 +47,6 @@
         android:textSize="20sp"
         android:padding="10dp"
         android:layout_below="@+id/v_background"
-
         />
     <Button
         android:background="@drawable/shape_corner_button"

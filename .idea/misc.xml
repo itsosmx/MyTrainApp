@@ -3,38 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MyTrainApp/app/src/main/res/layout/activity_buy_ticket.xml" value="0.264" />
-        <entry key="..\:/MyTrainApp/app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="..\:/MyTrainApp/app/src/main/res/layout/activity_qr_ticket.xml" value="0.1" />
-        <entry key="..\:/MyTrainApp/app/src/main/res/layout/activity_ticket_info.xml" value="0.275" />
-        <entry key="..\:/MyTrainApp/app/src/main/res/layout/activity_tickets_list.xml" value="0.19322033898305085" />
-        <entry key="..\:/MyTrainApp/app/src/main/res/layout/activity_userlist.xml" value="0.275" />
-        <entry key="..\:/MyTrainApp/app/src/main/res/layout/station_item.xml" value="0.264" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/drawable-v24/circle.xml" value="0.181" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/drawable-v24/circle2.xml" value="0.1865" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/drawable/ic_baseline_swap_vertical_circle_24.xml" value="0.181" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_admin_profile.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_buy_ticket.xml" value="0.264" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_enquirey.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_enquiry.xml" value="0.264" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_home.xml" value="0.21203703703703702" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_login.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_map.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_news.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_payment_method.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_qr_ticket.xml" value="0.2609375" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_read_ticket.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_signup.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_suggestions.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_ticket_info.xml" value="0.2609375" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_user_profile.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_user_settings.xml" value="0.1" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/activity_welcome.xml" value="0.2609375" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/app_buttom_bar.xml" value="0.275" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/enquirey.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/layout/spiner_item.xml" value="0.264" />
-        <entry key="..\:/Users/me182/AndroidStudioProjects/MyTrainApp/app/src/main/res/menu/navigation_menu.xml" value="0.12760416666666666" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/button.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/button_appbar_bg.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/buttton1.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/circle.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/circle2.xml" value="0.2579908675799087" />
@@ -42,8 +12,12 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/ic_baseline_perm_identity_24.xml" value="0.1439814814814815" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/ic_baseline_security_24.xml" value="0.1505" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/icon_email.xml" value="0.1" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/icon_security.xml" value="0.1" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/input_bg.xml" value="0.1439814814814815" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/rectangle.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/buttom_appbar_bg.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/button_appbar_bg.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/button_bg.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/button_bg_left.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1505" />
@@ -53,10 +27,19 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_local_offer_24.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_place_24.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_qr_code.xml" value="0.2065" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_notification.xml" value="0.1" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_qr_code_scanner.xml" value="0.2065" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_train.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/rectangle_buying.xml" value="0.2579908675799087" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/shape_circle_no_borders.xml" value="0.163" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/shape_corner_button.xml" value="0.1005" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/shape_ticket_backgorund.xml" value="0.2065" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/shape_ticket_header.xml" value="0.2065" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/user_profile_bg.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/font/almarai.xml" value="0.27031963470319637" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_admin_profile.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_base.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_buy_ticket.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_login.xml" value="0.24722222222222223" />
@@ -68,16 +51,25 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_read_ticket.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_signup.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_suggestions.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_ticket.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_ticket_info.xml" value="0.16" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_tickets_list.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_user_settings.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_welcome.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/app_buttom_bar.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/app_drawer_nav_header.xml" value="0.2462962962962963" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/app_drawer_navigation.xml" value="0.2115036231884058" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/component_loading.xml" value="0.21105072463768115" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/buttom_app_bar.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/button_app_bar.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/navigation_menu.xml" value="0.1" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

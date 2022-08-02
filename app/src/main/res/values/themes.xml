@@ -14,7 +14,11 @@
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondary</item>
+        <item name="actionOverflowButtonStyle">@style/MenuIcon</item>
         <!-- Customize your theme here. -->
-
+    </style>
+    <style name="MenuIcon" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/icon_menu</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
     </style>
 </resources>

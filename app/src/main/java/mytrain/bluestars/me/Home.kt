@@ -37,7 +37,6 @@ class Home: BaseActivity()  {
         }
         btn_track.setOnClickListener {
             Navigation().Navigate(this@Home, Map::class.java)
-//            val intent = Intent(this@Home, Map::class.java)
         }
         btn_inquiry.setOnClickListener {
             Navigation().Navigate(this@Home, Enquiry::class.java)
