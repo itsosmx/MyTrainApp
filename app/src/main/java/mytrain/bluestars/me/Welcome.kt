@@ -45,26 +45,7 @@ class Welcome : AppCompatActivity() {
     public override fun onStart() {
         super.onStart()
         if (fAuth.currentUser != null) {
-//            loading.startLoading()
-            database.child("users").child(fAuth.currentUser!!.uid).get()
-                .addOnSuccessListener {
-                   if (it.exists()) {
-                       val user = it.getValue(UserData::class.java)
-                       Log.i("User", user.toString())
-                       if (user!!.admin) {
-                           Navigation().Navigate(this@Welcome, AdminProfile::class.java)
-                       } else Navigation().Navigate(this@Welcome, Home::class.java)
-                   }
-//                    loading.endLoading()
-                }
-                .addOnFailureListener {
-                    Navigation().Navigate(this@Welcome, Home::class.java)
-//                    loading.endLoading()
-                }
-        } else {
-//            loading.endLoading()
-            Navigation().Navigate(this@Welcome, Login::class.java)
+            Navigation().Navigate(this@Welcome, UserCheck::class.java)
         }
-
     }
 }

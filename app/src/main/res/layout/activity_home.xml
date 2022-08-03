@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-    android:background="@color/dark"
-    android:orientation="vertical"
-    android:gravity="center" >
+    android:background="@color/dark">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
 
     <Button
         android:id="@+id/btn_buy_ticket"
@@ -45,7 +54,7 @@
         android:layoutDirection="rtl"
         />
     <Button
-        android:id="@+id/btn_inquiry"
+        android:id="@+id/btn_myTickets"
         android:layout_width="match_parent"
         android:layout_height="80sp"
         android:background="@drawable/button_bg"
@@ -54,8 +63,8 @@
         android:gravity="center"
         android:layout_marginVertical="20dp"
         android:layout_marginEnd="50dp"
-        android:text="إستعلام"
-        android:drawableRight="@drawable/icon_access_time"
+        android:text="تذاكري"
+        android:drawableRight="@drawable/icon_baseline_featured_play_list"
         android:drawableTint="@color/blue"
         android:paddingHorizontal="50dp"
         android:textSize="30sp"
@@ -97,4 +106,7 @@
         android:textSize="30sp"
         android:textColor="@color/white"
         />
-</LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

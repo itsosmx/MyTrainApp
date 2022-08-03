@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import mytrain.bluestars.me.Home
 import mytrain.bluestars.me.R
+import mytrain.bluestars.me.UserCheck
 import mytrain.bluestars.me.components.Navigation
 import mytrain.bluestars.me.data.UserData
 import java.lang.Exception
@@ -63,7 +64,7 @@ class Signup : AppCompatActivity() {
                         database.child("users").child(userId).setValue(userDate)
                             .addOnCompleteListener {
                                 Toast.makeText(this@Signup, "Account created!", Toast.LENGTH_SHORT).show()
-                                Navigation().Navigate(this@Signup, Home::class.java)
+                                Navigation().Navigate(this@Signup, UserCheck::class.java)
                             }
                         val profileUpdate = userProfileChangeRequest {
                             displayName = name

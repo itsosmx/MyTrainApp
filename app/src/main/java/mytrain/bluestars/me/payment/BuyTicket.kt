@@ -9,10 +9,11 @@ import androidx.core.view.get
 import mytrain.bluestars.me.R
 import android.app.DatePickerDialog
 import android.widget.EditText
+import mytrain.bluestars.me.BaseActivity
 import java.util.*
 
 
-class BuyTicket : AppCompatActivity() {
+class BuyTicket : BaseActivity() {
     val traveller = arrayOf("اختر عدد المسافرين",1,2,3,4)
     val travel_time = arrayOf("اختر توقيت السفر ","صباحاً","مساءاً")
     private lateinit var b_next: Button
@@ -24,6 +25,7 @@ class BuyTicket : AppCompatActivity() {
         et_travel_date = findViewById(R.id.et_travel_date)
         b_next = findViewById(R.id.b_next)
 
+        supportActionBar?.hide()
 
         val s_travel_place =findViewById<Spinner>(R.id.s_travel_place)
         val s_arrive_place =findViewById<Spinner>(R.id.s_arrive_place)

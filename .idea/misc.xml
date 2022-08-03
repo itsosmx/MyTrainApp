@@ -28,6 +28,7 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_baseline_place_24.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/ic_qr_code.xml" value="0.2065" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_baseline_featured_play_list.xml" value="0.1335" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_notification.xml" value="0.1" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_qr_code_scanner.xml" value="0.2065" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable/icon_train.xml" value="0.163" />
@@ -54,6 +55,7 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_ticket.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_ticket_info.xml" value="0.16" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_tickets_list.xml" value="0.24722222222222223" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_user_check.xml" value="0.17617753623188406" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_user_settings.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/activity_welcome.xml" value="0.24722222222222223" />

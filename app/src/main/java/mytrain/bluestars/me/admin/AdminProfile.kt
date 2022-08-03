@@ -44,4 +44,8 @@ class AdminProfile : AppCompatActivity() {
             loading.endLoading()
         }
     }
+
+    override fun onBackPressed() {
+        return
+    }
 }
