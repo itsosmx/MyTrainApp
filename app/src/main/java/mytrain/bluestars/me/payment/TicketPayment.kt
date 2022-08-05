@@ -32,7 +32,7 @@ import kotlin.Int
 //import com.paypal.checkout.paymentbutton.PayPalButton
 
 
-class PaymentMethod : AppCompatActivity() {
+class TicketPayment : AppCompatActivity() {
     private lateinit var b_buy: Button
     private lateinit var b_cancel: Button
 
@@ -79,7 +79,7 @@ class PaymentMethod : AppCompatActivity() {
         b_buy = findViewById(R.id.b_buy)
         b_cancel = findViewById(R.id.b_cancel)
 
-        var services = Intent(this@PaymentMethod, PayPalService::class.java)
+        var services = Intent(this@TicketPayment, PayPalService::class.java)
         services.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, PayPalConfiguration)
         startService(services)
 
@@ -96,7 +96,7 @@ class PaymentMethod : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        var services = Intent(this@PaymentMethod, PayPalService::class.java)
+        var services = Intent(this@TicketPayment, PayPalService::class.java)
         stopService(services)
         super.onDestroy()
     }
@@ -108,7 +108,7 @@ class PaymentMethod : AppCompatActivity() {
                 BigDecimal(String.valueOf(amount)), "USD", "Ticket",
                 PayPalPayment.PAYMENT_INTENT_SALE
             )
-            val intent = Intent(this@PaymentMethod, PaymentActivity::class.java)
+            val intent = Intent(this@TicketPayment, PaymentActivity::class.java)
             intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, PayPalConfiguration)
             intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payment);
             startActivityForResult(intent, PAYPAL_REQUEST_CODE);
@@ -151,7 +151,7 @@ class PaymentMethod : AppCompatActivity() {
                         val state = payObj.getJSONObject("response").getString("state")
                         Log.i("ID", payID)
                         Log.i("State", state)
-                        Navigation().Navigate(this@PaymentMethod, Home::class.java)
+                        Navigation().Navigate(this@TicketPayment, Home::class.java)
                     } catch (e: Exception) {
                         Log.e("Error", "an extremely unlikely failure occurred: ", e)
                     }

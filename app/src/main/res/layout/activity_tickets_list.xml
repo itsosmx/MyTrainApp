@@ -5,11 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TicketsList">
+    android:background="@color/dark"
+    tools:context=".payment.TicketsList">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/stationList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/station_item" />
+        tools:listitem="@layout/ticket_item" />
 </RelativeLayout>

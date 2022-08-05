@@ -2,6 +2,9 @@
 <resources>
     <string-array name="city" >
         <item>"اختر المحطة"</item>
+        <item>benisuef</item>
+        <item>cairo</item>
+        <item>gize</item>
         <item>الفيوم</item>
         <item>اسيوط</item>
         <item>الأسكندرية</item>

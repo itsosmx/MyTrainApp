@@ -1,27 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#181A20"
-    tools:context=".UserProfile">
+    android:background="@color/dark"
+    android:gravity="center_horizontal"
+    tools:context=".user.UserProfile">
 
     <View
         android:layout_width="600dp"
-        android:layout_height="600dp"
-        android:background="@drawable/shape_circle"
-        tools:layout_editor_absoluteX="-84dp"
-        tools:layout_editor_absoluteY="-187dp"
+        android:layout_height="400dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/shape_circle_no_borders"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="260dp"
+        android:fontFamily="@font/almarai_font"
+        android:text="اسم المستخدم"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_image"
+        app:layout_constraintVertical_bias="0.072"
         tools:ignore="MissingConstraints" />
 
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="190dp"
+        android:layout_height="181dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-213dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="248dp"
+        android:layout_toEndOf="@+id/tv_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@drawable/image_default_profile" />
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/bt_offers"
         android:layout_width="335dp"
-
         android:layout_height="55dp"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="345dp"
         android:background="#35383F"
-
         android:fontFamily="@font/almarai_font"
         android:freezesText="false"
         android:text="العروض                                              "
@@ -34,17 +74,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/google_map"
         app:layout_constraintVertical_bias="0.129"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/bt_logoff"
         android:layout_width="335dp"
-
         android:layout_height="55dp"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignBottom="@+id/bt_offers"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="-91dp"
         android:background="#35383F"
-
         android:fontFamily="@font/almarai_font"
         android:freezesText="false"
         android:text="تسجيل الخروج           "
@@ -55,21 +101,25 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.842"
+        app:layout_constraintTop_toBottomOf="@+id/google_map"
+        app:layout_constraintVertical_bias="0.869"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/setting"
         android:layout_width="335dp"
-
         android:layout_height="55dp"
-        android:layout_marginTop="208dp"
+        android:layout_alignTop="@+id/bt_logoff"
+        android:layout_alignBottom="@+id/bt_logoff"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="-233dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="234dp"
         android:background="#35383F"
         android:fontFamily="@font/almarai_font"
-
         android:freezesText="false"
         android:text="الاعدادات                                          "
         android:textColor="#246BFD"
@@ -78,48 +128,24 @@
         android:verticalScrollbarPosition="defaultPosition"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="173dp"
-        android:layout_height="152dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049"
-        app:srcCompat="@drawable/image_default_profile" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/almarai_font"
-        android:text="اسم المستخدم"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.072"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/google_map"
         android:layout_width="335dp"
-
         android:layout_height="55dp"
-        android:layout_marginTop="28dp"
+        android:layout_alignTop="@+id/bt_offers"
+        android:layout_alignBottom="@+id/bt_offers"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="-72dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="73dp"
         android:background="#35383F"
         android:fontFamily="@font/almarai_font"
-
         android:freezesText="false"
         android:text=" الخريطة                                               "
         android:textColor="#246BFD"
@@ -128,9 +154,9 @@
         android:verticalScrollbarPosition="defaultPosition"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/setting"
         tools:ignore="MissingConstraints" />
+</RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+

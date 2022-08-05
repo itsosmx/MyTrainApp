@@ -1,14 +1,10 @@
 package mytrain.bluestars.me
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.widget.Button
-import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import mytrain.bluestars.me.components.Navigation
-import mytrain.bluestars.me.payment.BuyTicket
+import mytrain.bluestars.me.payment.TicketPicker
 
 class Home: BaseActivity()  {
     private lateinit var fAuth: FirebaseAuth
@@ -33,7 +29,7 @@ class Home: BaseActivity()  {
         btn_suggestions = findViewById(R.id.btn_suggestions)
 
         btn_buy_ticket.setOnClickListener {
-            Navigation().Navigate(this@Home, BuyTicket::class.java)
+            Navigation().Navigate(this@Home, TicketPicker::class.java)
         }
         btn_track.setOnClickListener {
             Navigation().Navigate(this@Home, Map::class.java)

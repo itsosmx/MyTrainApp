@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark"
     app:circularflow_defaultRadius="15dp"
-    tools:context=".payment.BuyTicket">
+    tools:context=".payment.TicketPicker">
 
 <ScrollView
     android:layout_width="match_parent"

@@ -8,6 +8,7 @@
     android:background="@color/dark"
     app:circularflow_defaultRadius="15dp"
     tools:context=".payment.TicketInfo"
+    android:gravity="center_vertical"
     >
 
     <TextView
@@ -111,20 +112,20 @@
         tools:layout_editor_absoluteX="341dp"
         tools:layout_editor_absoluteY="414dp" />
 
-
     <TextView
         android:id="@+id/tv_to"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@+id/tv_face"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="107dp"
+        android:layout_marginTop="110sp"
         android:layout_marginEnd="100dp"
         android:background="@drawable/rectangle"
         android:gravity="center"
         android:text="القاهرة"
         android:textColor="@color/white"
         android:textSize="20sp" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -150,10 +151,23 @@
         android:layout_height="49sp"
         android:layout_below="@+id/tv_to"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
         android:background="@color/blue"
-        android:text="التالي"
+        android:text="شراء"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/b_cancel"
+        android:layout_width="280sp"
+        android:layout_height="49sp"
+        android:layout_below="@+id/b_next"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/red"
+        android:text="الغاء"
         android:textColor="@color/white"
         android:textSize="20sp" />
 

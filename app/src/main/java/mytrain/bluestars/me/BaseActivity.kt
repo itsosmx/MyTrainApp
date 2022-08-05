@@ -2,16 +2,15 @@ package mytrain.bluestars.me
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import mytrain.bluestars.me.auth.Login
 import mytrain.bluestars.me.components.LoadingDialog
 import mytrain.bluestars.me.components.Navigation
-import mytrain.bluestars.me.payment.BuyTicket
+import mytrain.bluestars.me.payment.TicketPicker
+import mytrain.bluestars.me.user.UserSettings
 
 open class BaseActivity : AppCompatActivity() {
     private lateinit var fAuth: FirebaseAuth
@@ -48,7 +47,7 @@ open class BaseActivity : AppCompatActivity() {
                 true
             }
             R.id.nav_buy_ticket -> {
-                Navigation().Navigate(this, BuyTicket::class.java)
+                Navigation().Navigate(this, TicketPicker::class.java)
                 true
             }
             R.id.nav_my_ticket -> {
@@ -56,7 +55,7 @@ open class BaseActivity : AppCompatActivity() {
                 true
             }
             R.id.nav_settings -> {
-                Toast.makeText(this, "No screen for this", Toast.LENGTH_SHORT).show()
+                Navigation().Navigate(this, UserSettings::class.java)
                 true
             }
             R.id.nav_share -> {
@@ -68,7 +67,7 @@ open class BaseActivity : AppCompatActivity() {
                 true
             }
             R.id.nav_suggestions -> {
-               Navigation().Message(this, "No screen for this")
+                Navigation().Navigate(this, Suggestions::class.java)
                 true
             }
             R.id.nav_signout -> {
