@@ -165,7 +165,8 @@ class TicketPayment : AppCompatActivity() {
                             .push()
                             .setValue(ticketDate)
                             .addOnCompleteListener {
-                                var intent = Intent(this@TicketPayment, Ticket::class.java)
+                                val intent = Intent(this@TicketPayment, Ticket::class.java)
+                                intent.putExtra("ticket_id", ticketDate.id)
                                 intent.putExtra("start_station", ticketDate.startStation)
                                 intent.putExtra("end_station", ticketDate.endStation)
                                 intent.putExtra("departure_date", ticketDate.departureDate)
