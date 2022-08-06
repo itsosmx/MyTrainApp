@@ -30,7 +30,7 @@ class TicketsList : BaseActivity() {
         stationArrayList = ArrayList()
 
 
-        adapter = StationAdapter(stationArrayList )
+        adapter = StationAdapter(stationArrayList, intent)
         stationRecyclereview.adapter =adapter
         getTicketsList(from.toString() , to.toString())
 
@@ -49,9 +49,6 @@ class TicketsList : BaseActivity() {
                         }
                         adapter.notifyDataSetChanged()
                     }
-
-                    var adapter = StationAdapter(stationArrayList)
-                    stationRecyclereview.adapter = adapter
                 }
                 override fun onCancelled(error: DatabaseError) {
                     TODO("Not yet implemented")

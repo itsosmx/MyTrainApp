@@ -10,7 +10,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import mytrain.bluestars.me.Home
 import mytrain.bluestars.me.R
 import mytrain.bluestars.me.UserCheck
 import mytrain.bluestars.me.components.Navigation

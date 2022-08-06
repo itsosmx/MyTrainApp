@@ -22,7 +22,7 @@
             android:name=".UserCheck"
             android:exported="false" />
         <activity
-            android:name=".Ticket"
+            android:name=".payment.Ticket"
             android:exported="false" /> <!-- Main Screen -->
         <activity
             android:name=".Welcome"

@@ -39,7 +39,7 @@ class TicketPicker : BaseActivity() {
         //traveller
         val s_traveller_number =findViewById<Spinner>(R.id.s_traveller_number)
         val arrayAdapter_traveller = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,traveller)
-        s_traveller_number.adapter=arrayAdapter_traveller
+        s_traveller_number.adapter =arrayAdapter_traveller
 
         //degree
 
@@ -61,10 +61,10 @@ class TicketPicker : BaseActivity() {
         b_next.setOnClickListener {
             val intent = Intent(this@TicketPicker, TicketsList::class.java)
             intent.putExtra("from", s_travel_place.selectedItem.toString())
-            intent.putExtra("to",s_arrive_place.selectedItem.toString())
-            //intent.putExtra("date",et_travel_dat.)
-            intent.putExtra("traveler_number",s_traveller_number.selectedItem.toString())
-            intent.putExtra("ticket_degree",s_ticket_degree.selectedItem.toString())
+            intent.putExtra("to", s_arrive_place.selectedItem.toString())
+            intent.putExtra("date", et_travel_date.text.toString())
+            intent.putExtra("traveler_number", s_traveller_number.selectedItem.toString())
+            intent.putExtra("ticket_class",s_ticket_degree.selectedItem.toString())
             intent.putExtra("travel_time",s_travel_time.selectedItem.toString())
             startActivity(intent)
         }

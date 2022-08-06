@@ -11,164 +11,155 @@
     android:gravity="center_vertical"
     >
 
-    <TextView
-        android:id="@+id/tv_screen_title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="شراء  تذكرة"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/circle"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/tv_screen_title"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="100dp"
-        android:background="@drawable/circle"
-        android:gravity="center"
-        android:minWidth="100dp"
-        android:padding="100dp"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="137dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/tv_screen_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="شراء  تذكرة"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/tv_egp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/tv_screen_title"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="120dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="160dp" />
+            <RelativeLayout
+                android:id="@+id/ll_price_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_screen_title"
+                android:gravity="center"
+                android:padding="20dp">
 
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/tv_screen_title"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="120dp"
-        android:gravity="center"
-        android:text="EGP"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="160dp" />
+                <TextView
+                    android:id="@+id/tv_ticket_price"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:text="00.00\nEGP"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+            </RelativeLayout>
 
+            <TextView
+                android:id="@+id/tv_face"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_price_container"
+                android:layout_marginTop="40dp"
+                android:text="الوجهه"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/tv_face"
-        android:layout_below="@+id/tv_egp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="الوجهه"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/tv_from"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/tv_face"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20sp"
-        android:layout_marginEnd="100dp"
-        android:background="@drawable/rectangle"
-        android:gravity="center"
-        android:text="بني سويف"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_face"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/light_dark"
+                android:gravity="center"
+                android:text="بني سويف"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_face"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="20sp"
-        android:layout_marginEnd="300dp"
-        android:fontFamily="@font/almarai_font"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:text="@string/mn"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="341dp"
-        tools:layout_editor_absoluteY="414dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_face"
+                android:layout_marginStart="330dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="300dp"
+                android:fontFamily="@font/almarai_font"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="@string/mn"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="341dp"
+                tools:layout_editor_absoluteY="414dp" />
 
-    <TextView
-        android:id="@+id/tv_to"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/tv_face"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="110sp"
-        android:layout_marginEnd="100dp"
-        android:background="@drawable/rectangle"
-        android:gravity="center"
-        android:text="القاهرة"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tv_to"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_face"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="110sp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/light_dark"
+                android:gravity="center"
+                android:text="القاهرة"
+                android:textColor="@color/white"
+                android:textSize="20sp"
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_face"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="110sp"
-        android:layout_marginEnd="300dp"
-        android:fontFamily="@font/almarai_font"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:text="@string/ela"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="341dp"
-        tools:layout_editor_absoluteY="414dp" />
+                />
 
 
-    <Button
-        android:id="@+id/b_next"
-        android:layout_width="280sp"
-        android:layout_height="49sp"
-        android:layout_below="@+id/tv_to"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/blue"
-        android:text="شراء"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_face"
+                android:layout_marginStart="330dp"
+                android:layout_marginTop="110sp"
+                android:layout_marginEnd="300dp"
+                android:fontFamily="@font/almarai_font"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="@string/ela"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="341dp"
+                tools:layout_editor_absoluteY="414dp" />
 
-    <Button
-        android:id="@+id/b_cancel"
-        android:layout_width="280sp"
-        android:layout_height="49sp"
-        android:layout_below="@+id/b_next"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/red"
-        android:text="الغاء"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/b_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_to"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/blue"
+                android:text="شراء"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:paddingVertical="20dp"
+                />
+
+            <Button
+                android:id="@+id/b_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/b_next"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/red"
+                android:text="الغاء"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:paddingVertical="15dp"
+                />
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

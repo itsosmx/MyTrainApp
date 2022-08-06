@@ -4,13 +4,18 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class TicketData(
-    val t_id: String? = null,
-    val t_from: String? = null,
-    val t_to: String? = null,
-    val t_validity: String? = null,
-    val t_train_id: String? = null,
-    val t_degree: String? = null,
-    val t_car_number: String? = null,
-    val t_seat: String? = null,
-    val t_price: String? = null
+    val id: String? = null,
+    val startStation: String? = null,
+    val endStation: String? = null,
+    val arrivalTime: String? = null,
+    val departureTime: String? = null,
+    val validity: String? = null,
+    val trainId: String? = null,
+    val seatClass: String? = null,
+    val carNumber: String? = null,
+    val seats: Int? = null,
+    val price: String? = null,
+    val departureDate: String? = null,
+    val trainType: String? = null,
+
 )

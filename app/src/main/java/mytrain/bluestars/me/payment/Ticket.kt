@@ -1,4 +1,4 @@
-package mytrain.bluestars.me
+package mytrain.bluestars.me.payment
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidmads.library.qrgenearator.QRGContents
 import androidmads.library.qrgenearator.QRGEncoder
 import androidx.appcompat.app.AppCompatActivity
-import com.google.zxing.WriterException
+import mytrain.bluestars.me.R
 
 
 class Ticket : AppCompatActivity() {
@@ -25,6 +25,7 @@ class Ticket : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ticket)
+        supportActionBar?.hide()
 
         btn_print = findViewById(R.id.btn_print)
         tv_s_station = findViewById(R.id.tv_s_station)

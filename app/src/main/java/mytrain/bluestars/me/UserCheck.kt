@@ -18,6 +18,7 @@ class UserCheck : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_check)
+        supportActionBar?.hide()
         fAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().getReference()
     }
