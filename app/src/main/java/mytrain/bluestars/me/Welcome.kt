@@ -31,21 +31,23 @@ class Welcome : AppCompatActivity() {
         btn_login = findViewById(R.id.btn_login)
         fAuth = FirebaseAuth.getInstance()
 //        loading = LoadingDialog(this)
-        database = FirebaseDatabase.getInstance().getReference()
+        database = FirebaseDatabase.getInstance().getReference("")
 
         btn_signup.setOnClickListener {
-            Navigation().Navigate(this, Signup::class.java)
+            Navigation().Navigate(this@Welcome, Signup::class.java)
         }
         btn_login.setOnClickListener {
-            Navigation().Navigate(this, Login::class.java)
+            Navigation().Navigate(this@Welcome, Login::class.java)
         }
     }
 
     // Check if the user logged and send him to Home if true
     public override fun onStart() {
         super.onStart()
-        if (fAuth.currentUser != null) {
-            Navigation().Navigate(this@Welcome, UserCheck::class.java)
+        fAuth.addAuthStateListener {
+            if (it.currentUser != null) {
+                Navigation().Navigate(this@Welcome, UserCheck::class.java)
+            }
         }
     }
 }

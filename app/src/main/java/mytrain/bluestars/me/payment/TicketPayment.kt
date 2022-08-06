@@ -13,8 +13,10 @@ import com.google.firebase.database.FirebaseDatabase
 import com.paymob.acceptsdk.*
 import com.paypal.android.sdk.payments.*
 import mytrain.bluestars.me.R
+import mytrain.bluestars.me.components.Navigation
 import mytrain.bluestars.me.components.Utils
 import mytrain.bluestars.me.data.TicketData
+import mytrain.bluestars.me.data.TrainData
 import org.json.JSONObject
 import java.lang.String
 import java.math.BigDecimal
@@ -77,10 +79,10 @@ class TicketPayment : AppCompatActivity() {
         val endStation = intent.getStringExtra("end_station")
         val departureDate = intent.getStringExtra("departure_date")
         val travelerNumber = intent.getStringExtra("traveler_number")
-        val ticketClass =  intent.getStringExtra("ticket_class")
+        val ticketClass = intent.getStringExtra("ticket_class")
         val travelTime = intent.getStringExtra("travel_time")
         val trainId = intent.getStringExtra("train_id")
-        val arrivalTime =  intent.getStringExtra("arrival_time")
+        val arrivalTime = intent.getStringExtra("arrival_time")
         val departureTime = intent.getStringExtra("departure_time")
         val trainType = intent.getStringExtra("type")
         val totalPrice = intent.getStringExtra("price")
@@ -148,7 +150,7 @@ class TicketPayment : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 123) {
+        if (requestCode == ACCEPT_PAYMENT_REQUEST) {
             if (resultCode == Activity.RESULT_OK) {
 
                 val confirm: PaymentConfirmation? = data?.getParcelableExtra(
@@ -164,22 +166,55 @@ class TicketPayment : AppCompatActivity() {
                         database.child("users").child(fAuth.currentUser!!.uid).child("tickets")
                             .push()
                             .setValue(ticketDate)
-                            .addOnCompleteListener {
-                                val intent = Intent(this@TicketPayment, Ticket::class.java)
-                                intent.putExtra("ticket_id", ticketDate.id)
-                                intent.putExtra("start_station", ticketDate.startStation)
-                                intent.putExtra("end_station", ticketDate.endStation)
-                                intent.putExtra("departure_date", ticketDate.departureDate)
-                                intent.putExtra("traveler_number", ticketDate.seats.toString())
-                                intent.putExtra("ticket_class", ticketDate.seatClass)
-                                intent.putExtra("train_id", ticketDate.trainId)
-                                intent.putExtra("arrival_time", ticketDate.arrivalTime)
-                                intent.putExtra("departure_time", ticketDate.departureTime)
-                                intent.putExtra("train_type", ticketDate.trainType)
-                                intent.putExtra("price", ticketDate.price)
-                                startActivity(intent)
+                            .addOnSuccessListener {
+                                database.child("trains").child(ticketDate.trainId.toString()).push()
+                                    .setValue(TrainData("0", "0"))
+                                    .addOnCompleteListener {
+                                        database.child("trains")
+                                            .child(ticketDate.trainId.toString()).child("tickets")
+                                            .push()
+                                            .setValue(ticketDate.id.toString())
+                                            .addOnSuccessListener {
+                                                val intent =
+                                                    Intent(this@TicketPayment, Ticket::class.java)
+                                                intent.putExtra("ticket_id", ticketDate.id)
+                                                intent.putExtra(
+                                                    "start_station",
+                                                    ticketDate.startStation
+                                                )
+                                                intent.putExtra(
+                                                    "end_station",
+                                                    ticketDate.endStation
+                                                )
+                                                intent.putExtra(
+                                                    "departure_date",
+                                                    ticketDate.departureDate
+                                                )
+                                                intent.putExtra(
+                                                    "traveler_number",
+                                                    ticketDate.seats.toString()
+                                                )
+                                                intent.putExtra(
+                                                    "ticket_class",
+                                                    ticketDate.seatClass
+                                                )
+                                                intent.putExtra("train_id", ticketDate.trainId)
+                                                intent.putExtra(
+                                                    "arrival_time",
+                                                    ticketDate.arrivalTime
+                                                )
+                                                intent.putExtra(
+                                                    "departure_time",
+                                                    ticketDate.departureTime
+                                                )
+                                                intent.putExtra("train_type", ticketDate.trainType)
+                                                intent.putExtra("price", ticketDate.price)
+                                                startActivity(intent)
+                                            }
+                                    }
                             }
                     } catch (e: Exception) {
+                        Navigation().Message(this, "Something went Wrong")
                         Log.e("Error", "an extremely unlikely failure occurred: ", e)
                     }
                 }

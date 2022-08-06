@@ -20,7 +20,7 @@ class UserCheck : AppCompatActivity() {
         setContentView(R.layout.activity_user_check)
         supportActionBar?.hide()
         fAuth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance().getReference()
+        database = FirebaseDatabase.getInstance().getReference("")
     }
 
     public override fun onStart() {
@@ -31,9 +31,8 @@ class UserCheck : AppCompatActivity() {
                     if (it.exists()) {
                         val user = it.getValue(UserData::class.java)
                         Log.i("User", user.toString())
-                        if (user!!.admin) {
-                            Navigation().Navigate(this@UserCheck, AdminProfile::class.java)
-                        } else Navigation().Navigate(this@UserCheck, Home::class.java)
+                        if (user!!.admin) Navigation().Navigate(this@UserCheck, AdminProfile::class.java)
+                        else Navigation().Navigate(this@UserCheck, Home::class.java)
                     }
                 }
                 .addOnFailureListener {

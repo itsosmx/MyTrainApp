@@ -67,6 +67,9 @@ class TicketInfo : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        return
+    }
 
 }
 
