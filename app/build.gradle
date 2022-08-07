@@ -52,6 +52,12 @@ dependencies {
     implementation 'morxander.editcard:EditCard:1.0.1'
     implementation 'com.android.volley:volley:1.2.1'
     implementation files("libs/acceptsdk-release.aar")
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1")
+
     //Paypal
     implementation 'com.paypal.sdk:paypal-android-sdk:2.14.2'
     //
@@ -60,7 +66,8 @@ dependencies {
     implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
     implementation 'com.google.zxing:core:3.3.0'
     implementation 'com.journeyapps:zxing-android-embedded:3.0.1@aar'
-//    implementation('com.paypal.checkout:android-sdk:0.7.3')
+    implementation 'com.github.sadra:AwesomeSpinner:1.5.2'
+
 }
 
 

@@ -1,12 +1,14 @@
 package mytrain.bluestars.me
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
 import mytrain.bluestars.me.components.Navigation
+import mytrain.bluestars.me.components.PaymobUtils
 import mytrain.bluestars.me.payment.TicketPicker
 
-class Home: BaseActivity()  {
+class Home : BaseActivity() {
     private lateinit var fAuth: FirebaseAuth
     private lateinit var btn_buy_ticket: Button
     private lateinit var btn_track: Button

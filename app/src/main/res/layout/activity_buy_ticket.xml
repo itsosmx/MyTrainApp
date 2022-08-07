@@ -29,6 +29,8 @@
 
             <Spinner
                 android:id="@+id/s_travel_place"
+                app:spinnerHint="محطة القيام"
+                app:spinnerDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@+id/tv_screen_title"

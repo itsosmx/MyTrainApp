@@ -46,7 +46,7 @@ class Welcome : AppCompatActivity() {
         super.onStart()
         fAuth.addAuthStateListener {
             if (it.currentUser != null) {
-                Navigation().Navigate(this@Welcome, UserCheck::class.java)
+                Navigation().Navigate(this@Welcome, Home::class.java)
             }
         }
     }
