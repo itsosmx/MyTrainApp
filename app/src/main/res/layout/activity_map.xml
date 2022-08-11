@@ -9,7 +9,6 @@
     >
 
 
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="87dp"
@@ -21,10 +20,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.226" />
+        app:layout_constraintVertical_bias="0.207" />
 
     <TextView
         android:id="@+id/textView2"
@@ -58,21 +57,23 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="431dp"
-        android:layout_height="526dp"
+        android:layout_width="400dp"
+        android:layout_height="306dp"
         android:background="#181A20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047"
+        app:layout_constraintVertical_bias="0.223"
         app:srcCompat="@drawable/egypt_relief_location_map" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="87dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="240dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:background="@color/blue"
         android:fontFamily="@font/almarai_font"
         android:text=" 5  دقائق "
@@ -80,7 +81,9 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.331" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

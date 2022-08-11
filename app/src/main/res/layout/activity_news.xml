@@ -5,25 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#181A20"
-    tools:context=".News">
+    tools:context=".News"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="47dp">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="357dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rectangle_buying"
-        android:fontFamily="@font/almarai_font"
-        android:text="موعد  انطلاق  القطار  التالي"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button4"
@@ -33,36 +18,34 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rectangle_buying"
         android:fontFamily="@font/almarai_font"
-        android:text="عدد  المقاعد   الفارغة"
+        android:text="أجندة  المواعيد"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29"
+        app:layout_constraintVertical_bias="0.439"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button3"
         android:layout_width="357dp"
         android:layout_height="51dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/rectangle_buying"
         android:fontFamily="@font/almarai_font"
-        android:text="عدد   القطارات  المتبقية"
+        android:text="رد  التذكرة"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412"
+        app:layout_constraintVertical_bias="0.3"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -73,28 +56,31 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/rectangle_buying"
         android:fontFamily="@font/almarai_font"
-        android:text="موعد  وصول  الـــرحــلـــة "
+        android:text="الأخبار"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533"
+        app:layout_constraintVertical_bias="0.578"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="متابعة اخبار القطار "
-        android:textColor="@color/white"
-        android:textSize="30sp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/almarai_font"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="58dp"
+        android:text="الخدمات"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071"
         tools:ignore="MissingConstraints" />
 
 
