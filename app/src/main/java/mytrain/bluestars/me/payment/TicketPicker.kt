@@ -7,8 +7,10 @@ import android.view.View
 import android.widget.*
 import mytrain.bluestars.me.R
 import android.app.DatePickerDialog
+import android.graphics.Insets.add
 import android.widget.EditText
 import mytrain.bluestars.me.BaseActivity
+import mytrain.bluestars.me.data.cityes
 import java.util.*
 
 
@@ -17,6 +19,45 @@ class TicketPicker : BaseActivity() {
     val travel_time = arrayOf("اختر توقيت السفر ","صباحاً","مساءاً")
     private lateinit var b_next: Button
     lateinit var et_travel_date: EditText
+    private lateinit var mySpinner: Spinner
+    private lateinit var adapter: ArrayAdapter<cityes>
+
+
+    private fun getCustomObjects(): ArrayList<cityes> {
+        val customObjects = ArrayList<cityes>()
+        customObjects.apply {
+            add(cityes("", "حدد المحطة "))
+            add(cityes("bani_suef", "بنى سويف"))
+            add(cityes("cairo", "القاهره"))
+            add(cityes("giza", "الجيزه"))
+            add(cityes("asyut", "اسيوط"))
+            add(cityes("alexandria", "الأسكندرية"))
+            add(cityes("ismailia", "لأسماعيلية"))
+            add(cityes("fayoum", "الفيوم"))
+            add(cityes("luxor", "الأقصر"))
+            add(cityes("zagazig", "الزقازيق"))
+            add(cityes("suez", "السويس"))
+            add(cityes("aswan", "اسوان"))
+            add(cityes("mahalla_al_kubra", "المحله الكبرى"))
+            add(cityes("mansoura", "المنصورة"))
+            add(cityes("minya", "المنيا"))
+            add(cityes("banha", "بنها"))
+            add(cityes("port_said", "بورسعيد"))
+            add(cityes("damanhour", "دمنهور"))
+            add(cityes("domiette", "دمياط"))
+            add(cityes("sohage", "سوهاج"))
+            add(cityes("sidi gaber", "سيدى جابر"))
+            add(cityes("shubra_el_kheima", "شبرا الخيمه"))
+            add(cityes("tanta", "طنطا"))
+            add(cityes("qena", "قنا"))
+            add(cityes("kafr_al_sheikh", "كفر الشيخ"))
+            add(cityes("marsa_matrouh", "مرسى مطروح"))
+            add(cityes("itai_el_baroud", "ايتاى البارود"))
+
+        }
+        return customObjects
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_ticket)
@@ -30,11 +71,17 @@ class TicketPicker : BaseActivity() {
 
         val s_travel_place =findViewById<Spinner>(R.id.s_travel_place)
         val s_arrive_place =findViewById<Spinner>(R.id.s_arrive_place)
-        //val et_travel_date =findViewById<DatePicker>(R.id.et_travel_date)
 
+/*
+        //travel & arrive
         val arrayAdapter = ArrayAdapter.createFromResource(this,R.array.city,android.R.layout.simple_spinner_item)
         s_travel_place.adapter=arrayAdapter
         s_arrive_place.adapter=arrayAdapter
+*/
+        val customObjects = getCustomObjects()
+        adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, customObjects)
+        s_travel_place.adapter = adapter
+        s_arrive_place.adapter = adapter
 
         //traveller
         val s_traveller_number =findViewById<Spinner>(R.id.s_traveller_number)
