@@ -28,9 +28,7 @@
 
 
             <Spinner
-                android:id="@+id/s_travel_place"
-                app:spinnerHint="محطة القيام"
-                app:spinnerDirection="rtl"
+                android:id="@+id/s_start_station"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@+id/tv_screen_title"
@@ -39,7 +37,9 @@
                 android:background="@color/light_dark"
                 android:backgroundTint="@color/white"
                 android:layoutDirection="rtl"
-                android:popupBackground="@color/white" />
+                android:popupBackground="@color/white"
+                app:spinnerDirection="rtl"
+                app:spinnerHint="محطة القيام" />
 
             <TextView
                 android:id="@+id/tv_travel"
@@ -54,10 +54,10 @@
                 android:textSize="20sp" />
 
             <Spinner
-                android:id="@+id/s_arrive_place"
+                android:id="@+id/s_end_station"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/s_travel_place"
+                android:layout_below="@+id/s_start_station"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="35dp"
                 android:background="@color/light_dark"
@@ -80,7 +80,7 @@
                 android:id="@+id/et_travel_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/s_arrive_place"
+                android:layout_below="@+id/s_end_station"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="35dp"
                 android:background="@color/white"
@@ -101,7 +101,7 @@
                 android:id="@+id/tv_date"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_below="@+id/s_arrive_place"
+                android:layout_below="@+id/s_end_station"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="5dp"
                 android:layoutDirection="rtl"

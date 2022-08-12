@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import mytrain.bluestars.me.Home
 import mytrain.bluestars.me.R
+import mytrain.bluestars.me.data.CitySpinnerData
 
 
 class TicketInfo : AppCompatActivity() {
@@ -28,20 +29,23 @@ class TicketInfo : AppCompatActivity() {
         tv_ticket_price = findViewById(R.id.tv_ticket_price)
         b_cancel = findViewById(R.id.b_cancel)
 
-        val startStation = intent.getStringExtra("start_station")
-        val endStation = intent.getStringExtra("end_station")
+        val startStation: CitySpinnerData =
+            intent.getSerializableExtra("start_station") as CitySpinnerData
+        val endStation: CitySpinnerData =
+            intent.getSerializableExtra("end_station") as CitySpinnerData
+
         val departureDate = intent.getStringExtra("departure_date")
         val travelerNumber = intent.getStringExtra("traveler_number")
-        val ticketClass =  intent.getStringExtra("ticket_class")
+        val ticketClass = intent.getStringExtra("ticket_class")
         val travelTime = intent.getStringExtra("travel_time")
         val trainId = intent.getStringExtra("train_id")
-        val arrivalTime =  intent.getStringExtra("arrival_time")
+        val arrivalTime = intent.getStringExtra("arrival_time")
         val departureTime = intent.getStringExtra("departure_time")
         val type = intent.getStringExtra("type")
         val totalPrice = intent.getStringExtra("price")
 
-        tv_from.text = startStation
-        tv_to.text = endStation
+        tv_from.text = startStation.name
+        tv_to.text = endStation.name
         tv_ticket_price.text = "$totalPrice\nEGP"
 
         b_next.setOnClickListener {

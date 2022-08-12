@@ -1,4 +1,5 @@
 package mytrain.bluestars.me.payment
+
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -7,6 +8,7 @@ import mytrain.bluestars.me.BaseActivity
 import mytrain.bluestars.me.adapters.StationAdapter
 import mytrain.bluestars.me.data.StationData
 import mytrain.bluestars.me.R
+import mytrain.bluestars.me.data.CitySpinnerData
 
 
 class TicketsList : BaseActivity() {
@@ -22,19 +24,26 @@ class TicketsList : BaseActivity() {
         //remove topbar
         supportActionBar?.hide()
 
-        val to = intent.getStringExtra("to")
-        val from = intent.getStringExtra("from")
+        val startStation: CitySpinnerData? =
+            intent.getSerializableExtra("start_station") as CitySpinnerData?
+        val endStation: CitySpinnerData? =
+            intent.getSerializableExtra("end_station") as CitySpinnerData?
 
         stationRecyclereview = findViewById(R.id.stationList)
         stationRecyclereview.layoutManager = LinearLayoutManager(this)
         stationArrayList = ArrayList()
 
+        println("//////////////////////")
+        println(startStation!!.id)
+        println(endStation!!.id)
+        println("//////////////////////")
 
         adapter = StationAdapter(stationArrayList, intent)
-        stationRecyclereview.adapter =adapter
-        getTicketsList(from.toString() , to.toString())
+        stationRecyclereview.adapter = adapter
+        getTicketsList(startStation!!.id, endStation!!.id)
 
     }
+
     private fun getTicketsList(from: String, to: String) {
         dbref = FirebaseDatabase.getInstance().getReference("")
         dbref.child("stations")
@@ -42,14 +51,15 @@ class TicketsList : BaseActivity() {
             .child(to)
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    if (snapshot.exists()){
-                        for (snap in snapshot.children){
+                    if (snapshot.exists()) {
+                        for (snap in snapshot.children) {
                             val station = snap.getValue(StationData::class.java)
                             stationArrayList.add(station!!)
                         }
                         adapter.notifyDataSetChanged()
                     }
                 }
+
                 override fun onCancelled(error: DatabaseError) {
                     TODO("Not yet implemented")
                 }

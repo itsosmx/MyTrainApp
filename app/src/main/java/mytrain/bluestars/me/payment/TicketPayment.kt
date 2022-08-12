@@ -1,29 +1,21 @@
 package mytrain.bluestars.me.payment
 
-import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.paymob.acceptsdk.*
-import com.paypal.android.sdk.payments.*
 import mytrain.bluestars.me.Home
 import mytrain.bluestars.me.R
-import mytrain.bluestars.me.components.Navigation
 import mytrain.bluestars.me.components.PaymobUtils
 import mytrain.bluestars.me.components.Utils
+import mytrain.bluestars.me.data.CitySpinnerData
 import mytrain.bluestars.me.data.TicketData
 import mytrain.bluestars.me.data.TrainData
-import org.json.JSONObject
-import java.lang.String
-import java.math.BigDecimal
-import kotlin.Exception
 import kotlin.Int
 
 class TicketPayment : AppCompatActivity() {
@@ -48,14 +40,17 @@ class TicketPayment : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_payment_method)
+        setContentView(R.layout.activity_ticket_payment)
         supportActionBar?.hide()
 
         database = FirebaseDatabase.getInstance().getReference("")
         fAuth = FirebaseAuth.getInstance()
 
-        val startStation = intent.getStringExtra("start_station")
-        val endStation = intent.getStringExtra("end_station")
+        val startStation: CitySpinnerData =
+            intent.getSerializableExtra("start_station") as CitySpinnerData
+        val endStation: CitySpinnerData =
+            intent.getSerializableExtra("end_station") as CitySpinnerData
+
         val departureDate = intent.getStringExtra("departure_date")
         val travelerNumber = intent.getStringExtra("traveler_number")
         val ticketClass = intent.getStringExtra("ticket_class")
@@ -69,8 +64,8 @@ class TicketPayment : AppCompatActivity() {
 
         initTicket = TicketData(
             uuid,
-            startStation.toString(),
-            endStation.toString(),
+            startStation!!.id,
+            endStation!!.id,
             arrivalTime.toString(),
             departureTime.toString(),
             null,
@@ -100,12 +95,10 @@ class TicketPayment : AppCompatActivity() {
                             if (paymentResponse != null) {
                                 orderId = orderResponse.id.toString()
                                 payWithPaymob(paymentResponse.token)
-                            } else Log.i("ss", "err")
+                            } else Log.i("paymentResponse", "error")
                         }
-                    } else Log.i("ss", "err")
-
+                    } else Log.i("orderResponse", "error")
                 }
-
             }
         }
     }
@@ -171,12 +164,12 @@ class TicketPayment : AppCompatActivity() {
                     }
                     IntentConstants.TRANSACTION_SUCCESSFUL_PARSING_ISSUE -> {
                         saveTransactionData(extra)
-                        ToastMaker.displayShortToast(
-                            this,
-                            "TRANSACTION_SUCCESSFUL - Parsing Issue" + extra.getString(
-                                SaveCardResponseKeys.TOKEN
-                            )
-                        );
+//                        ToastMaker.displayShortToast(
+//                            this,
+//                            "TRANSACTION_SUCCESSFUL - Parsing Issue" + extra.getString(
+//                                SaveCardResponseKeys.TOKEN
+//                            )
+//                        );
                     }
                     IntentConstants.TRANSACTION_SUCCESSFUL_CARD_SAVED -> {
                         Log.d(
