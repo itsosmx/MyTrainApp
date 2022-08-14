@@ -16,12 +16,8 @@
         android:theme="@style/Theme.MyTrain"
         tools:replace="android:supportsRtl,android:icon,android:theme">
         <activity
-            android:name=".Ticket_cancel"
+            android:name=".UpdateData"
             android:exported="false" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
-
         <activity
             android:name=".user.UserProfile"
             android:exported="false" />
@@ -30,18 +26,19 @@
             android:exported="false" />
         <activity
             android:name=".payment.Ticket"
-            android:exported="false" />
-        <!-- Main Screen -->
+            android:exported="false" /> <!-- Main Screen -->
         <activity
             android:name=".Welcome"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".payment.TicketsList"
             android:exported="true" />
-
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
@@ -50,10 +47,8 @@
             android:exported="true" />
         <activity
             android:name=".payment.TicketPicker"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Suggestions"
             android:exported="false"
@@ -87,9 +82,7 @@
         <activity
             android:name=".payment.TicketPayment"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".Map"
             android:exported="true"
@@ -102,16 +95,9 @@
             android:name=".auth.Login"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".Home"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

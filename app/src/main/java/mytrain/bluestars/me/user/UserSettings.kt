@@ -1,12 +1,12 @@
 package mytrain.bluestars.me.user
 
 import android.content.Intent
-import android.media.MediaSession2Service
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import mytrain.bluestars.me.R
+import mytrain.bluestars.me.UpdateData
 
 class UserSettings : AppCompatActivity() {
     private lateinit var notification: Button
@@ -21,8 +21,7 @@ class UserSettings : AppCompatActivity() {
         setContentView(R.layout.activity_user_settings)
         notification = findViewById(R.id.notification)
         notification.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
-
+            val intent = Intent(this@UserSettings, UpdateData::class.java)
             // start your next activity*/
             startActivity(intent)
 
@@ -47,7 +46,7 @@ class UserSettings : AppCompatActivity() {
 
 
                     share = findViewById(R.id.share)
-                    var URI = "https://www.canva.com"
+                    var URI = "https://www.google.com"
 
                     share.setOnClickListener {
                         val intent = Intent(Intent.ACTION_VIEW)
