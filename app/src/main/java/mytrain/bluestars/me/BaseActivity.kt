@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import mytrain.bluestars.me.auth.Login
 import mytrain.bluestars.me.components.LoadingDialog
 import mytrain.bluestars.me.components.Navigation
+import mytrain.bluestars.me.payment.MyTicketsList
 import mytrain.bluestars.me.payment.TicketPicker
 import mytrain.bluestars.me.user.UserSettings
 
@@ -51,7 +52,7 @@ open class BaseActivity : AppCompatActivity() {
                 true
             }
             R.id.nav_my_ticket -> {
-                Toast.makeText(this, "No screen for this", Toast.LENGTH_SHORT).show()
+                Navigation().Navigate(this, MyTicketsList::class.java)
                 true
             }
             R.id.nav_settings -> {
