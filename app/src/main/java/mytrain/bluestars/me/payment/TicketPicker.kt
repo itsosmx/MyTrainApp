@@ -7,14 +7,16 @@ import mytrain.bluestars.me.R
 import android.app.DatePickerDialog
 import android.view.View
 import android.widget.EditText
+import androidx.core.view.isEmpty
 import mytrain.bluestars.me.BaseActivity
+import mytrain.bluestars.me.components.Navigation
 import mytrain.bluestars.me.data.CitySpinnerData
 import java.util.*
 
 
 class TicketPicker : BaseActivity() {
-    val traveller = arrayOf("اختر عدد المسافرين", 1, 2, 3, 4)
-    val travel_time = arrayOf("اختر توقيت السفر ", "صباحاً", "مساءاً")
+    val traveller = arrayOf(1, 2, 3, 4)
+    val travel_time = arrayOf("صباحاً", "مساءاً")
     private lateinit var b_next: Button
     lateinit var et_travel_date: EditText
     private lateinit var city_adapter: ArrayAdapter<CitySpinnerData>
@@ -35,7 +37,7 @@ class TicketPicker : BaseActivity() {
         s_end_station = findViewById(R.id.s_end_station)
         s_start_station = findViewById(R.id.s_start_station)
 
-        val customObjects = getCustomObjects()
+        val customObjects = CitySpinnerData().applyDefaultCities();
         city_adapter = ArrayAdapter(this, R.layout.spinner_item, customObjects)
         city_adapter.setDropDownViewResource(R.layout.spinner_item);
 
@@ -90,13 +92,20 @@ class TicketPicker : BaseActivity() {
 
         b_next.setOnClickListener {
             val intent = Intent(this@TicketPicker, TicketsList::class.java)
+
             intent.putExtra("start_station", SelectedStartStation)
             intent.putExtra("end_station", SelectedEndStation)
             intent.putExtra("date", et_travel_date.text.toString())
             intent.putExtra("traveler_number", s_traveller_number.selectedItem.toString())
             intent.putExtra("ticket_class", s_ticket_degree.selectedItem.toString())
             intent.putExtra("travel_time", s_travel_time.selectedItem.toString())
-            startActivity(intent)
+
+            if (et_travel_date.text.isEmpty() || s_traveller_number.isEmpty() || s_travel_time.isEmpty() || s_ticket_degree.isEmpty()) {
+                Navigation().Message(this, "ارجو ملئ كل البيانات")
+            } else if (SelectedStartStation.id == SelectedEndStation.id) {
+                Navigation().Message(this, "تاكد من صحة البيانات المدرجة")
+            }
+            else startActivity(intent)
         }
 
 
@@ -118,38 +127,5 @@ class TicketPicker : BaseActivity() {
             datePickerDialog.show()
         }
 
-    }
-
-    private fun getCustomObjects(): ArrayList<CitySpinnerData> {
-        val cityObject = ArrayList<CitySpinnerData>()
-        cityObject.apply {
-            add(CitySpinnerData("benisuef", "بنى سويف"))
-            add(CitySpinnerData("cairo", "القاهره"))
-            add(CitySpinnerData("giza", "الجيزه"))
-            add(CitySpinnerData("asyut", "اسيوط"))
-            add(CitySpinnerData("alexandria", "الأسكندرية"))
-            add(CitySpinnerData("ismailia", "الإسماعيلية"))
-            add(CitySpinnerData("fayoum", "الفيوم"))
-            add(CitySpinnerData("luxor", "الأقصر"))
-            add(CitySpinnerData("zagazig", "الزقازيق"))
-            add(CitySpinnerData("suez", "السويس"))
-            add(CitySpinnerData("aswan", "أسوان"))
-            add(CitySpinnerData("mahalla_al_kubra", "المحله الكبرى"))
-            add(CitySpinnerData("mansoura", "المنصورة"))
-            add(CitySpinnerData("minya", "المنيا"))
-            add(CitySpinnerData("banha", "بنها"))
-            add(CitySpinnerData("portsaid", "بورسعيد"))
-            add(CitySpinnerData("damanhour", "دمنهور"))
-            add(CitySpinnerData("domiette", "دمياط"))
-            add(CitySpinnerData("sohage", "سوهاج"))
-            add(CitySpinnerData("sidigaber", "سيدى جابر"))
-            add(CitySpinnerData("shubraelkheima", "شبرا الخيمه"))
-            add(CitySpinnerData("tanta", "طنطا"))
-            add(CitySpinnerData("qena", "قنا"))
-            add(CitySpinnerData("kafralsheikh", "كفر الشيخ"))
-            add(CitySpinnerData("marsamatrouh", "مرسى مطروح"))
-            add(CitySpinnerData("itaielbaroud", "ايتاى البارود"))
-        }
-        return cityObject
     }
 }

@@ -1,5 +1,6 @@
 package mytrain.bluestars.me.adapters
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +12,8 @@ import mytrain.bluestars.me.R
 import mytrain.bluestars.me.data.CitySpinnerData
 import mytrain.bluestars.me.data.StationData
 import mytrain.bluestars.me.payment.TicketInfo
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class StationAdapter(private val stationList: ArrayList<StationData>, val intent: Intent) :
     RecyclerView.Adapter<StationAdapter.MYViewHolder>() {
@@ -21,6 +24,7 @@ class StationAdapter(private val stationList: ArrayList<StationData>, val intent
         return MYViewHolder(itemView)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MYViewHolder, position: Int) {
         val current = stationList[position]
         val start_station: CitySpinnerData =
@@ -36,9 +40,12 @@ class StationAdapter(private val stationList: ArrayList<StationData>, val intent
         holder.tv_ticket_arrival_time.text = current.arrivalTime
         holder.tv_ticket_departure_time.text = current.departureTime
         holder.tv_ticket_class.text = current.type
-        holder.tv_ticket_price.text = current.price.toString()
+        holder.tv_ticket_price.text = current.price.toString() + " EGP"
 
-        val calcPrice = current.price?.times(travelerNumber!!.toInt())
+        val timedPrice = current.price?.times(travelerNumber!!.toInt())
+        val df = DecimalFormat("#.##")
+        df.roundingMode = RoundingMode.UP
+        val calcPrice = df.format(timedPrice)
 
 
         holder.itemView.setOnClickListener {

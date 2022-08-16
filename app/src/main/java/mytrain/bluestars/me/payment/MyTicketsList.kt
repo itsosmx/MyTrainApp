@@ -8,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import mytrain.bluestars.me.BaseActivity
 import mytrain.bluestars.me.R
+import mytrain.bluestars.me.components.Navigation
 import mytrain.bluestars.me.data.TicketData
 
 
@@ -22,17 +23,12 @@ class MyTicketsList : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_tickets_list)
 
-        //remove topbar
-        supportActionBar?.hide()
-
-//        val to = intent.getStringExtra("to")
-//        val from = intent.getStringExtra("from")
+        supportActionBar?.title = "تذاكري"
         fAuth = FirebaseAuth.getInstance()
 
         stationRecyclereview = findViewById(R.id.stationList)
         stationRecyclereview.layoutManager = LinearLayoutManager(this)
         stationArrayList = ArrayList()
-
 
         adapter = MyTicketAdapter(stationArrayList, intent)
         stationRecyclereview.adapter = adapter
@@ -43,14 +39,16 @@ class MyTicketsList : BaseActivity() {
         dbref.child("users")
             .child(fAuth.currentUser!!.uid)
             .child("tickets")
-
-
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()){
                         for (snap in snapshot.children){
-                            val station = snap.getValue(TicketData::class.java)
-                            stationArrayList.add(station!!)
+                            if (snapshot.children.count() > 0) {
+                                val station = snap.getValue(TicketData::class.java)
+                                stationArrayList.add(station!!)
+                            } else {
+                                Navigation().Message(this@MyTicketsList, "لم تقم بشراء اي تذكره")
+                            }
                         }
                         adapter.notifyDataSetChanged()
                     }

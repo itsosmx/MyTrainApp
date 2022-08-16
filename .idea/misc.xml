@@ -3,6 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/drawable-v24/buttton1.xml" value="0.159" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/drawable/button_appbar_bg.xml" value="0.159" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/drawable/button_bg.xml" value="0.159" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/drawable/button_bg_left.xml" value="0.159" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/drawable/button_my_ticket_list_amount.xml" value="0.159" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/drawable/round_btn.xml" value="0.159" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_admin_profile.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_base.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_home.xml" value="0.25025641025641027" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_login.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_map.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_my_tickets_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_news.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_qr_ticket.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_read_ticket.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_signup.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_suggestions.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_ticket.xml" value="0.25025641025641027" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_ticket_cancel.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_ticket_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_ticket_payment.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_ticket_picker.xml" value="0.25025641025641027" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_tickets_list.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_update_data.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_user_check.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_user_profile.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_user_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/activity_welcome.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/app_buttom_bar.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/app_drawer_nav_header.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/component_loading.xml" value="0.16614583333333333" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/my_ticket_item.xml" value="0.264" />
+        <entry key="..\:/New folder/MyTrainApp/app/src/main/res/layout/ticket_item.xml" value="0.25025641025641027" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/button.xml" value="0.2579908675799087" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/button_appbar_bg.xml" value="0.163" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/drawable-v24/buttton1.xml" value="0.2579908675799087" />
@@ -66,7 +99,7 @@
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/component_loading.xml" value="0.21105072463768115" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/spinner_item.xml" value="0.20606884057971014" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/station_item.xml" value="0.24722222222222223" />
-        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/ticket_item.xml" value="0.17617753623188406" />
+        <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/layout/ticket_item.xml" value="0.33" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/buttom_app_bar.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/button_app_bar.xml" value="0.24722222222222223" />
         <entry key="..\:/WorkSpace/Projects/Kotlin/MyTrain/app/src/main/res/menu/navigation_menu.xml" value="0.1" />

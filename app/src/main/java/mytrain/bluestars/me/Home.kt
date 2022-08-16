@@ -20,7 +20,7 @@ class Home : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        supportActionBar?.title = "Home"
+        supportActionBar?.title = "الرئيسية"
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         fAuth = FirebaseAuth.getInstance()

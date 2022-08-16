@@ -250,6 +250,9 @@ class TicketPayment : AppCompatActivity() {
 
             }
     }
+    override fun onBackPressed() {
+        return
+    }
 
 }
 
