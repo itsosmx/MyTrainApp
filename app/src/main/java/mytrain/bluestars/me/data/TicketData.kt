@@ -21,4 +21,5 @@ data class TicketData(
     val status: String? = null,
     val transactions_id: String? = null,
     val createdAt: String? = null
+
 )

@@ -6,6 +6,7 @@ import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
 import mytrain.bluestars.me.components.Navigation
 import mytrain.bluestars.me.components.PaymobUtils
+import mytrain.bluestars.me.payment.MyTicketsList
 import mytrain.bluestars.me.payment.TicketPicker
 
 class Home : BaseActivity() {
@@ -37,7 +38,7 @@ class Home : BaseActivity() {
             Navigation().Navigate(this@Home, Map::class.java)
         }
         btn_myTickets.setOnClickListener {
-            Navigation().Navigate(this@Home, Enquiry::class.java)
+            Navigation().Navigate(this@Home, MyTicketsList::class.java)
         }
         btn_news.setOnClickListener {
             Navigation().Navigate(this@Home, News::class.java)
