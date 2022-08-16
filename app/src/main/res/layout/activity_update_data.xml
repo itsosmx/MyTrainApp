@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".UpdateData">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/displayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/input"
+            android:drawableEnd="@drawable/icon_account_box"
+            android:drawablePadding="20dp"
+            android:hint="اسم المستخدم"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/updateBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.501"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="168dp"
+            android:background="@drawable/input"
+            android:drawableEnd="@drawable/icon_email"
+            android:drawablePadding="20dp"
+            android:hint="البريد الالكتروني"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/updateBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.733"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/input"
+            android:drawableEnd="@drawable/icon_security"
+            android:drawablePadding="20dp"
+            android:hint="كلمة السر"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/updateBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.733"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:layout_constraintVertical_bias="0.364"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="612dp"
+            android:backgroundTint="@color/blue"
+            android:textSize="24dp"
+            android:fontFamily="@font/almarai_font"
+            android:textColor="@color/white"
+            android:text="تحديث البيانات"
+            android:background="@drawable/input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_updata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:fontFamily="@font/almarai_font"
+            android:text="تحديث البيانات الشخصية "
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/displayName"
+            app:layout_constraintEnd_toEndOf="@+id/displayName"
+            app:layout_constraintStart_toStartOf="@+id/displayName" />
+
+        <ImageView
+            android:id="@+id/im_photo_user"
+            android:layout_width="251dp"
+            android:layout_height="187dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_updata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/photo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
