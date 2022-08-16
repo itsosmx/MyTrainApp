@@ -16,8 +16,12 @@
         android:theme="@style/Theme.MyTrain"
         tools:replace="android:supportsRtl,android:icon,android:theme">
         <activity
+            android:name=".TimeTable"
+            android:exported="false" />
+        <activity
             android:name=".Ticket_cancel"
             android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
@@ -30,8 +34,7 @@
             android:exported="false" />
         <activity
             android:name=".payment.Ticket"
-            android:exported="false" />
-        <!-- Main Screen -->
+            android:exported="false" /> <!-- Main Screen -->
         <activity
             android:name=".Welcome"
             android:exported="true"
@@ -41,7 +44,6 @@
         <activity
             android:name=".payment.TicketsList"
             android:exported="true" />
-
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
@@ -102,7 +104,6 @@
             android:name=".auth.Login"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".Home"
             android:exported="true">

@@ -21,26 +21,5 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/et_start_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_marginHorizontal="20dp"
-        android:background="@color/white"
-        android:calendarTextColor="@color/white"
-        android:calendarViewShown="false"
-        android:clickable="false"
-        android:cursorVisible="false"
-        android:datePickerMode="spinner"
-        android:drawableEnd="@drawable/table"
-        android:focusable="false"
-        android:hint="حدد التاريخ"
-        android:layoutDirection="rtl"
-        android:paddingHorizontal="10dp"
-        android:textSize="20sp"
-        app:circularflow_radiusInDP="20dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="133dp"
-        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
