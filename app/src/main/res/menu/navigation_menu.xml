@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    
     >
 
     <item android:id="@+id/nav_home" android:title="الرئيسية" android:icon="@drawable/icon_notification" />
-    <item android:id="@+id/nav_notification" android:title="الاشعارات" android:icon="@drawable/icon_notification" />
     <item android:id="@+id/nav_buy_ticket" android:title="حجز تذكرة" android:icon="@drawable/icon_notification" />
     <item android:id="@+id/nav_my_ticket" android:title="التذاكر" android:icon="@drawable/icon_notification" />
     <item android:id="@+id/nav_settings" android:title="الاعدادات" android:icon="@drawable/icon_notification" />

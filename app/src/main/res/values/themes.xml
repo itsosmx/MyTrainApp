@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyTrain" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style  name="Theme.MyTrain" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:layoutDirection">rtl</item>
         <item name="fontFamily" >@font/almarai_font</item>
         <item name="android:fontFamily" >@font/almarai_font</item>
         <item name="android:textColor">@color/dark</item>

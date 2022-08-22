@@ -8,9 +8,96 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:669664321485:android:a4032840b7bf05db5cee84",
+        "android_client_info": {
+          "package_name": "com.example.firebaserecyclerviewkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669664321485-gkk3m4h4fjs0tslp17muv8s8ok132ubs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBTprDH2XnwtoXpNBLD_HTBaniYhiIPtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669664321485-gkk3m4h4fjs0tslp17muv8s8ok132ubs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669664321485:android:1f687f473d2f2bb05cee84",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669664321485-gkk3m4h4fjs0tslp17muv8s8ok132ubs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBTprDH2XnwtoXpNBLD_HTBaniYhiIPtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669664321485-gkk3m4h4fjs0tslp17muv8s8ok132ubs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:669664321485:android:7b683e20010d3ee75cee84",
         "android_client_info": {
           "package_name": "mytrain.bluestars.me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669664321485-gkk3m4h4fjs0tslp17muv8s8ok132ubs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBTprDH2XnwtoXpNBLD_HTBaniYhiIPtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669664321485-gkk3m4h4fjs0tslp17muv8s8ok132ubs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669664321485:android:4470162b2211f1b55cee84",
+        "android_client_info": {
+          "package_name": "mytrain.osmx.me"
         }
       },
       "oauth_client": [
