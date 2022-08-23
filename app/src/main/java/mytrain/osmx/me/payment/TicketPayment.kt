@@ -206,7 +206,6 @@ class TicketPayment : AppCompatActivity() {
     private fun saveTransactionData(extra: Bundle) {
         val day: Long = 1000 * 60 * 60 * 24
         val validity: Long = System.currentTimeMillis() + day
-        println(extra)
         ticketPayload = TicketData(
             id = initTicket.id,
             startStation = initTicket.startStation,

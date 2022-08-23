@@ -1,23 +1,8 @@
 <resources>
-    <string name="paymob_payment_key">ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6VXhNaUo5LmV5SjFjMlZ5WDJsa0lqb3pOVFUxTENKdmNtUmxjbDlwWkNJNk5qRXpNams0TUN3aVkzVnljbVZ1WTNraU9pSkZSMUFpTENKcGJuUmxaM0poZEdsdmJsOXBaQ0k2TkRnMU9Dd2liRzlqYTE5dmNtUmxjbDkzYUdWdVgzQmhhV1FpT21aaGJITmxMQ0ppYVd4c2FXNW5YMlJoZEdFaU9uc2labWx5YzNSZmJtRnRaU0k2SWtOc2FXWm1iM0prSWl3aWJHRnpkRjl1WVcxbElqb2lUbWxqYjJ4aGN5SXNJbk4wY21WbGRDSTZJa1YwYUdGdUlFeGhibVFpTENKaWRXbHNaR2x1WnlJNklqZ3dNamdpTENKbWJHOXZjaUk2SWpReUlpd2lZWEJoY25SdFpXNTBJam9pT0RBeklpd2lZMmwwZVNJNklrcGhjMnR2YkhOcmFXSjFjbWRvSWl3aWMzUmhkR1VpT2lKVmRHRm9JaXdpWTI5MWJuUnllU0k2SWtOU0lpd2laVzFoYVd3aU9pSmpiR0YxWkdWMGRHVXdPVUJsZUdFdVkyOXRJaXdpY0dodmJtVmZiblZ0WW1WeUlqb2lLemcyS0RncE9URXpOVEl4TURRNE55SXNJbkJ2YzNSaGJGOWpiMlJsSWpvaU1ERTRPVGdpTENKbGVIUnlZVjlrWlhOamNtbHdkR2x2YmlJNklrNUJJbjBzSW1WNGNDSTZNell3TURBd01EQXdNREF3TVRZd01ESTJNakF3T1N3aVlXMXZkVzUwWDJObGJuUnpJam8xTURBd01EQXNJbkJ0YTE5cGNDSTZJalF4TGpJek5pNHhOREF1TWpFMEluMC5yTXdsRXhiWF8xbFZsVHBIanhwaFNscDlLd3V1YzVnRVBfRy1xTFgtdHRnWW83SWJQNXpsTDFfS2RlYkxUeGlXMHl6WEM2Z29LbnVoQVAxMjV5RWExUQ==</string>
     <string name="app_name">MyTrain</string>
-    <string name="suggestions">إقتراحات</string>
-    <string name="news">أخبار اليوم</string>
-    <string name="table">مواعيد القطارات</string>
-    <string name="tracking">تتبع قطاري</string>
     <string name="ticket">حجز تذكرة</string>
-    <string name="title">شراء تذكرة</string>
-    <string name="destination">الواجهة</string>
-    <string name="form">بني سويف</string>
-    <string name="to">القاهرة</string>
-    <string name="buying">شراء</string>
     <string name="mn">من</string>
     <string name="ela">إلى</string>
     <string name="text2">  تذكرتك  </string>
-    <string name="welcom">مرحبا بك</string>
-    <string name="mytrain">MY TRAIN</string>
-    <string name="signup">إنشاء حساب</string>
-    <string name="longin">تسجيل دخول</string>
-    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>
