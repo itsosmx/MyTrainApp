@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="TICKET"
+                    android:text="التذكرة"
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="36sp"
@@ -142,6 +142,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_departureTime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -180,11 +181,12 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text=" رقم القطار       "
-                        android:textAlignment="textEnd"
+                        android:text=" رقم القطار    "
+                        android:textAlignment="center"
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:id="@+id/tv_id"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -204,7 +206,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text=" درجة القطار             "
+                        android:text=" درجة القطار  "
                         android:textAlignment="center"
                         android:textSize="18sp"/>
 
@@ -245,6 +247,7 @@
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:id="@+id/tv_seatClass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -269,6 +272,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_car"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -322,12 +326,16 @@
 
 
         <Button
-            android:id="@+id/btn_print"
+            android:id="@+id/btn_delete1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/blue"
-            android:text="Print"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/red"
+            android:paddingVertical="15dp"
+            android:text="الغاء الحجز "
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 

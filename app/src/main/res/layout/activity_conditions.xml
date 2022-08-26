@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181A20"
+    tools:context=".conditions">
+
+
+    <TextView
+        android:id="@+id/conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text=" حقوق الملكية الفكرية :  \n\n
+يجوز للمستخدم فقط  استخدام المعلومات التي تم استردادها وعرضها او تنزيلها او الحصول عليها عن طريق عرض هذا التطبيق , لأستخدامة الشخصي وغير التجاري ولا يجوز بيع هذه المعلومات او البيانات او إعادة بيعها او ارسالها او اتاحتها بطريقة أخري او نشرها باي طريقة \n\n\n محتوي التطبيق : \n\n هذا التطبيق يصمم خصيصاً لمستخدمي القطار  حيث يتم من خلاله حجز تذكرتك - تتبع قطارك بطريقة
+اسهل واسرع \n\n\n الروابط الخاصة بنا : \n\n يمكنك الأطلاع علي الروابط الخاصة بنا في صفحة تواصل معنا المتواجدة في الأعدادات   "
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

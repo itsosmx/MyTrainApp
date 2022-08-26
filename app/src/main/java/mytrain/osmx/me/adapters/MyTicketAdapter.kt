@@ -20,7 +20,7 @@ class MyTicketAdapter(private val stationList:ArrayList<TicketData>, val intent:
 
     override fun onBindViewHolder(holder: MYViewHolder, position: Int) {
         val current = stationList[position]
-
+        val ticket :TicketData = stationList[position]
         holder.tv_startStation.text= current.startStation
         holder.tv_endStation.text= current.endStation
         holder.tv_arrivalTime.text= current.arrivalTime
@@ -42,7 +42,7 @@ class MyTicketAdapter(private val stationList:ArrayList<TicketData>, val intent:
 
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, Ticket::class.java)
-
+                       intent.putExtra("ticket", ticket)
             it.context.startActivity(intent)
 
         }
