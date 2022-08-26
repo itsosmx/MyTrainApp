@@ -1,6 +1,6 @@
 package mytrain.osmx.me.payment
 
-import android.content.Intent
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -9,58 +9,131 @@ import android.widget.TextView
 import androidmads.library.qrgenearator.QRGContents
 import androidmads.library.qrgenearator.QRGEncoder
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import mytrain.osmx.me.Home
 import mytrain.osmx.me.R
+import mytrain.osmx.me.components.Navigation
+import mytrain.osmx.me.data.TicketData
+import java.util.*
 
 
 class Ticket : AppCompatActivity() {
     private lateinit var tv_s_station: TextView
     private lateinit var tv_e_station: TextView
-    private lateinit var btn_print: Button
+    private lateinit var btn_delete1: Button
     private lateinit var tv_train_degree: TextView
     private lateinit var tv_time_date: TextView
+    private lateinit var ticketData: TicketData
+    lateinit var fAuth: FirebaseAuth
+    lateinit var dbref: DatabaseReference
+
+    private lateinit var tv_departureTime: TextView
+    private lateinit var tv_id: TextView
+    private lateinit var tv_seatClass: TextView
+    private lateinit var tv_car: TextView
+    private lateinit var tv_egp: TextView
+
+    lateinit var ticketList: ArrayList<TicketData>
+
     var im: ImageView? = null
     //val preferences = getSharedPreferences("MyLogin", MODE_PRIVATE)
 
     private lateinit var myName: TextView
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ticket)
         supportActionBar?.hide()
+        fAuth = FirebaseAuth.getInstance()
 
-        btn_print = findViewById(R.id.btn_print)
+        dbref = FirebaseDatabase.getInstance().getReference("")
+
+        btn_delete1 = findViewById(R.id.btn_delete1)
         tv_s_station = findViewById(R.id.tv_s_station)
         tv_e_station = findViewById(R.id.tv_e_station)
         tv_train_degree = findViewById(R.id.tv_train_degree)
         tv_time_date = findViewById(R.id.tv_time_date)
+        tv_departureTime = findViewById(R.id.tv_departureTime)
+        tv_id = findViewById(R.id.tv_id)
+        tv_seatClass = findViewById(R.id.tv_seatClass)
+        tv_car = findViewById(R.id.tv_car)
+        tv_egp = findViewById(R.id.tv_egp)
+
         myName = findViewById((R.id.tv_egp))
         im = findViewById(R.id.im_view)
+        ticketData = intent.getSerializableExtra("ticket") as TicketData
 
 
-        val to = intent.getStringExtra("to")
-        val from = intent.getStringExtra("from")
+        tv_s_station.text = ticketData.startStation
+        tv_e_station.text = ticketData.endStation
+        tv_departureTime.text = ticketData.departureTime
+        tv_train_degree.text = ticketData.seatClass
+        tv_id.text =ticketData.trainId
+        tv_time_date.text=ticketData.departureDate
+        tv_seatClass.text= ticketData.seats.toString()
+        tv_car.text=ticketData.status
+        tv_egp.text=ticketData.amount
 
-        val traveler_number = intent.getStringExtra("traveler_number")
-        val ticket_degree = intent.getStringExtra("ticket_degree")
-        val travel_time = intent.getStringExtra("date")
 
-        tv_s_station.text = from
-        tv_e_station.text = to
-        tv_time_date.text = travel_time
-        tv_train_degree.text = ticket_degree
+        //val newDate = Date(ticketData.validity - 172800000L) // 2 * 24 * 60 * 60 * 1000
 
-        btn_print.setOnClickListener {
-            val intent = Intent(this@Ticket, Ticket::class.java)
-            intent.putExtra("from", from)
-            intent.putExtra("to", to)
-            intent.putExtra("traveler_number", traveler_number)
-            intent.putExtra("ticket_degree", ticket_degree)
-            intent.putExtra("travel_time", travel_time)
-            startActivity(intent)
+
+        btn_delete1.setOnClickListener {
+        delete()
         }
-        generateQrCode("Ticket ID")
-        //generateQrCode(preferences.getString("userID", ""))
-        //Log.i("qr", preferences.getString("userID", "").toString())
+
+
+        generateQrCode(ticketData.id)
+
     }
+
+
+//1661288715799
+//1661289571184
+
+
+    private fun delete()
+    {
+
+        val time = System.currentTimeMillis()
+
+        val days = (time-ticketData.validity!!)
+
+        dbref.child("users")
+            .child(fAuth.currentUser!!.uid)
+            .child("tickets")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()){
+                        for (snap in snapshot.children){
+                            val ticket = snap.getValue(TicketData::class.java)
+                            if (ticket?.id == ticketData.id) {
+                                if (days > 0)
+                                {
+                                    snap.ref.removeValue()
+                                        .addOnSuccessListener {
+                                            Navigation().Navigate(this@Ticket, Home::class.java)
+                                            Navigation().Message(this@Ticket,"تمت العملية بنجاح" )
+
+                                        }
+
+                                }
+                                else
+                                {
+                                    Navigation().Message(this@Ticket,"لا يمكن الغاء الحجز الا قبل 48 ساعة من موعد الرحلة" )
+                                }
+
+                            }
+                        }
+                    }
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
+    }
+
     fun generateQrCode(text: String?){
         val qrGenerator = QRGEncoder(text, null, QRGContents.Type.TEXT, 500)
         try {

@@ -154,11 +154,10 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button_shape"
                 android:backgroundTint="@color/red"
+                android:paddingVertical="15dp"
                 android:text="الغاء"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:paddingVertical="15dp"
-                />
+                android:textSize="20sp" />
         </RelativeLayout>
     </ScrollView>
 

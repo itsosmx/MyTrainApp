@@ -1,6 +1,7 @@
 package mytrain.osmx.me.data
 
 import com.google.firebase.database.IgnoreExtraProperties
+import java.io.Serializable
 
 @IgnoreExtraProperties
 data class TicketData(
@@ -22,4 +23,4 @@ data class TicketData(
     val transactions_id: String? = null,
     val createdAt: String? = null
 
-)
+): Serializable

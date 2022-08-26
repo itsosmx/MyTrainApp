@@ -2,12 +2,10 @@ package mytrain.osmx.me.user
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import mytrain.osmx.me.BaseActivity
-import mytrain.osmx.me.R
-import mytrain.osmx.me.UpdateData
+import mytrain.osmx.me.*
+import mytrain.osmx.me.components.Navigation
 
 class UserSettings : BaseActivity() {
     private lateinit var notification: Button
@@ -27,67 +25,62 @@ class UserSettings : BaseActivity() {
             val intent = Intent(this@UserSettings, UpdateData::class.java)
             // start your next activity*/
             startActivity(intent)
+        }
 
-            privacy = findViewById(R.id.privacy)
-            privacy.setOnClickListener {
-                val intent = Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://policies.google.com/privacy?hl=ar")
-                )
-                // start your next activity*/
-                startActivity(intent)
-
-
-                conditions = findViewById(R.id.conditions)
-                conditions.setOnClickListener {
-                    val intent = Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://www.google.com/intl/ar/policies/terms/archive/20070416/")
-                    )
-                    // start your next activity*/
-                    startActivity(intent)
-
-
-                    share = findViewById(R.id.share)
-                    var URI = "https://www.google.com"
-
-                    share.setOnClickListener {
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.putExtra("share this", URI)
-                        // start your next activity*/
-                        startActivity(intent)
-
-                        who = findViewById(R.id.who)
-                        who.setOnClickListener {
-                            val intent = Intent(
-                                Intent.ACTION_VIEW,
-                                Uri.parse("https://www.facebook.com/search/top?q=blue%20stars")
-                            )
-                            startActivity(intent)
-
-                            ranning = findViewById(R.id.ranning)
-                            ranning.setOnClickListener {
-                                val intent = Intent(
-                                    Intent.ACTION_VIEW,
-                                    Uri.parse("https://www.facebook.com/search/top?q=blue%20stars")
-                                )
-                                startActivity(intent)
-
-                                evalute = findViewById(R.id.evalute)
-                                evalute.setOnClickListener {
-                                    val intent = Intent(
-                                        Intent.ACTION_VIEW,
-                                        Uri.parse("https://support.google.com/googleplay/answer/6209544?hl=ar")
-                                    )
-                                    startActivity(intent)
-                                }
-                            }
-                        }
-                    }
-
-
-                }
+        evalute = findViewById(R.id.evalute)
+        evalute.setOnClickListener {
+            var url =
+                "https://play.google.com/store/apps/details?id=mytrain.osmx.me&hl=en-US&ah=GBf2-9R6RaMqR3CmGzrevwTc1yU";
+            startActivity(Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(url)
+            })
+        }
+        share = findViewById(R.id.share)
+        share.setOnClickListener {
+            try {
+                val shareIntent = Intent(Intent.ACTION_SEND)
+                shareIntent.type = "text/plain"
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My Train || قطاري")
+                var shareMessage = "\n تطبيق قطاري لحجز تذاكر وتتبع قطارات سكك حديد مصر بطريقة سهلة !! \n\n"
+                shareMessage =
+                    """
+                    ${shareMessage}https://play.google.com/store/apps/details?id=mytrain.osmx.me&hl=en-US&ah=GBf2-9R6RaMqR3CmGzrevwTc1yU${BuildConfig.APPLICATION_ID}
+                    
+                    """.trimIndent()
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+                startActivity(Intent.createChooser(shareIntent, "choose one"))
+            } catch (e: Exception) {
+                //e.toString();
             }
         }
+        who = findViewById(R.id.who)
+        who.setOnClickListener {
+            Navigation().Navigate(this@UserSettings, WeAre::class.java)
+        }
+
+        ranning = findViewById(R.id.ranning)
+        ranning.setOnClickListener {
+            Navigation().Navigate(this@UserSettings, callUs::class.java)
+        }
+
+        conditions = findViewById(R.id.conditions)
+        conditions.setOnClickListener {
+            Navigation().Navigate(this@UserSettings, mytrain.osmx.me.conditions::class.java)
+        }
+
+        privacy = findViewById(R.id.privacy)
+        privacy.setOnClickListener {
+            Navigation().Navigate(this@UserSettings, Privacy::class.java)
+        }
+
+
+
+
+
+
+
+
+
     }
 }
+
