@@ -18,6 +18,8 @@
     <string name="mytrain">MY TRAIN</string>
     <string name="signup">إنشاء حساب</string>
     <string name="longin">تسجيل دخول</string>
-    <string name="title_activity_maps">MapsActivity</string>
+<!--    <string name="title_activity_maps">MapsActivity</string>-->
+    <string name="app_name1">GoogleMapCurrentLocation</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

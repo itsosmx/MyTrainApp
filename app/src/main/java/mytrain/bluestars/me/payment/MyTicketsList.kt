@@ -2,6 +2,7 @@
 
 package mytrain.bluestars.me.payment
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -9,6 +10,8 @@ import com.google.firebase.database.*
 import mytrain.bluestars.me.BaseActivity
 import mytrain.bluestars.me.R
 import mytrain.bluestars.me.components.Navigation
+import mytrain.bluestars.me.data.CitySpinnerData
+import mytrain.bluestars.me.data.FirebaseCitySpinnerData
 import mytrain.bluestars.me.data.TicketData
 
 
@@ -18,6 +21,10 @@ class MyTicketsList : BaseActivity() {
     lateinit var stationArrayList: ArrayList<TicketData>
     lateinit var adapter: MyTicketAdapter
     lateinit var fAuth: FirebaseAuth
+
+    private lateinit var city_adapter: ArrayAdapter<CitySpinnerData>
+    private lateinit var SelectedEndStation: FirebaseCitySpinnerData
+    private lateinit var SelectedStartStation: FirebaseCitySpinnerData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

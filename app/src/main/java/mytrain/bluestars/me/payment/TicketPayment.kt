@@ -3,6 +3,7 @@ package mytrain.bluestars.me.payment
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.util.TimeUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
@@ -17,7 +18,7 @@ import mytrain.bluestars.me.data.CitySpinnerData
 import mytrain.bluestars.me.data.TicketData
 import mytrain.bluestars.me.data.TrainData
 import kotlin.Int
-
+import java.util.concurrent.TimeUnit
 class TicketPayment : AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private lateinit var fAuth: FirebaseAuth
@@ -30,13 +31,15 @@ class TicketPayment : AppCompatActivity() {
     private var extra: Bundle = Bundle()
     private val showSaveCard = true
 
-    /* Paymob
+
+    /*Paymob
     * Card Number: 5123456789012346
     * Cardholder Name: Test Account
     * Expiry Month: 12
     * Expiry Year: 25
     * CVV: 123
     * */
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -204,9 +207,11 @@ class TicketPayment : AppCompatActivity() {
     }
 
     private fun saveTransactionData(extra: Bundle) {
-        val day: Long = 1000 * 60 * 60 * 24
-        val validity: Long = System.currentTimeMillis() + day
-        println(extra)
+
+        val milliseconds: Long = System.currentTimeMillis()
+    val days = TimeUnit.MILLISECONDS.toDays(milliseconds)
+    val validity:Long = days
+
         ticketPayload = TicketData(
             id = initTicket.id,
             startStation = initTicket.startStation,

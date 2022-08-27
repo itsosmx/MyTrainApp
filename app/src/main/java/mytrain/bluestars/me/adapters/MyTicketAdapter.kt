@@ -32,7 +32,7 @@ class MyTicketAdapter(private val stationList:ArrayList<TicketData>, val intent:
         holder.tv_seats.text= current.seats.toString()
         holder.tv_order_id.text= current.order_id
         holder.tv_trainId.text= current.trainId
-        holder.tv_validity.text= current.validity.toString()
+        holder.tv_validity.text= (current.validity).toString()
         holder.tv_amount.text= current.amount
 
 

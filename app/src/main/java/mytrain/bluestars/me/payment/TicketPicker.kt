@@ -87,9 +87,6 @@ class TicketPicker : BaseActivity() {
         val arrayAdapter_time =
             ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, travel_time)
         s_travel_time.adapter = arrayAdapter_time
-
-
-
         b_next.setOnClickListener {
             val intent = Intent(this@TicketPicker, TicketsList::class.java)
 
