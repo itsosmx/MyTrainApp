@@ -1,12 +1,13 @@
-package mytrain.osmx.me
+package mytrain.osmx.me.utils
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import mytrain.osmx.me.R
 
-class callUs : AppCompatActivity() {
+class CallUs : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

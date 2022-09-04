@@ -13,9 +13,7 @@ import mytrain.osmx.me.Home
 import mytrain.osmx.me.R
 import mytrain.osmx.me.components.PaymobUtils
 import mytrain.osmx.me.components.Utils
-import mytrain.osmx.me.data.CitySpinnerData
-import mytrain.osmx.me.data.TicketData
-import mytrain.osmx.me.data.TrainData
+import mytrain.osmx.me.data.*
 import kotlin.Int
 
 class TicketPayment : AppCompatActivity() {
@@ -54,7 +52,8 @@ class TicketPayment : AppCompatActivity() {
         val departureDate = intent.getStringExtra("departure_date")
         val travelerNumber = intent.getStringExtra("traveler_number")
         val ticketClass = intent.getStringExtra("ticket_class")
-        val travelTime = intent.getStringExtra("travel_time")
+        val startTime =
+            intent.getStringExtra("start_time") //TODO [Calc the valid data from start time]
         val trainId = intent.getStringExtra("train_id")
         val arrivalTime = intent.getStringExtra("arrival_time")
         val departureTime = intent.getStringExtra("departure_time")
@@ -78,7 +77,7 @@ class TicketPayment : AppCompatActivity() {
             trainType
         )
         PaymobUtils().getToken() { tokenResponse ->
-            var amountCent = initTicket.amount?.toDouble()?.times(100)
+            var amountCent = initTicket.amount
             var quantity = initTicket.seats
             if (tokenResponse != null) {
                 PaymobUtils().registerOrder(
@@ -206,6 +205,7 @@ class TicketPayment : AppCompatActivity() {
     private fun saveTransactionData(extra: Bundle) {
         val day: Long = 1000 * 60 * 60 * 24
         val validity: Long = System.currentTimeMillis() + day
+
         ticketPayload = TicketData(
             id = initTicket.id,
             startStation = initTicket.startStation,
@@ -221,26 +221,43 @@ class TicketPayment : AppCompatActivity() {
             departureDate = initTicket.departureDate,
             trainType = initTicket.trainType,
             order_id = orderId,
-            createdAt = extra.getString(PayResponseKeys.CREATED_AT) ,
+            createdAt = extra.getString(PayResponseKeys.CREATED_AT),
             status = extra.getString(PayResponseKeys.PENDING),
         )
 
-        database.child("users").child(fAuth.currentUser!!.uid).child("tickets")
+        val userTicket = database.child("users").child(fAuth.currentUser!!.uid).child("tickets")
+        val trainTicket = database.child("trains").child(ticketPayload.trainId.toString())
+
+        val trainTicketPayload =
+            TicketPayload(ticketPayload.id.toString(), ticketPayload.seats?.toInt())
+
+
+        userTicket
             .push().setValue(ticketPayload)
             .addOnSuccessListener {
-                database.child("trains").child(ticketPayload.trainId.toString()).get()
+                trainTicket.get()
                     .addOnSuccessListener {
                         if (it.exists()) {
-                            database.child("trains").child(ticketPayload.trainId.toString())
+                            val currentTrainPayload = it.getValue(TicketUnavailableSeats::class.java)
+                            trainTicket.child("unavailable")
+                                .setValue(currentTrainPayload!!.unavailable?.plus(ticketPayload.seats!!.toInt()))
+                            trainTicket
                                 .child("tickets").push()
-                                .setValue(ticketPayload.id)
+                                .setValue(trainTicketPayload)
                         } else {
-                            database.child("trains").child(ticketPayload.trainId.toString())
-                                .setValue(TrainData())
+                            trainTicket
+                                .setValue(
+                                    TrainData(
+                                        latitude = 0.0,
+                                        longitude = 0.0,
+                                        seats = 100,
+                                        unavailable = ticketPayload.seats
+                                    )
+                                )
                                 .addOnSuccessListener {
-                                    database.child("trains").child(ticketPayload.trainId.toString())
+                                    trainTicket
                                         .child("tickets").push()
-                                        .setValue(ticketPayload.id)
+                                        .setValue(trainTicketPayload)
                                 }
                         }
                         val intent = Intent(this, Home::class.java)
@@ -249,11 +266,13 @@ class TicketPayment : AppCompatActivity() {
 
             }
     }
+
     override fun onBackPressed() {
         return
     }
 
 }
+
 
 
 /*

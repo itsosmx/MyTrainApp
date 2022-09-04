@@ -25,22 +25,19 @@ class Ticket : AppCompatActivity() {
     private lateinit var tv_train_degree: TextView
     private lateinit var tv_time_date: TextView
     private lateinit var ticketData: TicketData
-    lateinit var fAuth: FirebaseAuth
-    lateinit var dbref: DatabaseReference
-
+    private lateinit var fAuth: FirebaseAuth
+    private lateinit var dbref: DatabaseReference
     private lateinit var tv_departureTime: TextView
     private lateinit var tv_id: TextView
     private lateinit var tv_seatClass: TextView
     private lateinit var tv_car: TextView
     private lateinit var tv_egp: TextView
-
-    lateinit var ticketList: ArrayList<TicketData>
-
-    var im: ImageView? = null
+    private lateinit var myName: TextView
+    var QRimage: ImageView? = null
     //val preferences = getSharedPreferences("MyLogin", MODE_PRIVATE)
 
-    private lateinit var myName: TextView
-    @SuppressLint("NewApi")
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ticket)
@@ -61,7 +58,7 @@ class Ticket : AppCompatActivity() {
         tv_egp = findViewById(R.id.tv_egp)
 
         myName = findViewById((R.id.tv_egp))
-        im = findViewById(R.id.im_view)
+        QRimage = findViewById(R.id.im_view)
         ticketData = intent.getSerializableExtra("ticket") as TicketData
 
 
@@ -69,18 +66,25 @@ class Ticket : AppCompatActivity() {
         tv_e_station.text = ticketData.endStation
         tv_departureTime.text = ticketData.departureTime
         tv_train_degree.text = ticketData.seatClass
-        tv_id.text =ticketData.trainId
-        tv_time_date.text=ticketData.departureDate
-        tv_seatClass.text= ticketData.seats.toString()
-        tv_car.text=ticketData.status
-        tv_egp.text=ticketData.amount
+        tv_id.text = ticketData.trainId
+        tv_time_date.text = ticketData.departureDate
+        tv_seatClass.text = ticketData.seats.toString()
+        tv_car.text = ticketData.status
+        tv_egp.text = ticketData.amount
 
 
         //val newDate = Date(ticketData.validity - 172800000L) // 2 * 24 * 60 * 60 * 1000
 
 
+        val time = System.currentTimeMillis()
+
+        val days = (time - ticketData.validity!!)
+
+        println("/////////////////////////////////////////")
+        println(days)
+
         btn_delete1.setOnClickListener {
-        delete()
+            delete()
         }
 
 
@@ -93,53 +97,55 @@ class Ticket : AppCompatActivity() {
 //1661289571184
 
 
-    private fun delete()
-    {
+    private fun delete() {
 
         val time = System.currentTimeMillis()
 
-        val days = (time-ticketData.validity!!)
+        val days = (time - ticketData.validity!!)
+
+
+
 
         dbref.child("users")
             .child(fAuth.currentUser!!.uid)
             .child("tickets")
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    if (snapshot.exists()){
-                        for (snap in snapshot.children){
+                    if (snapshot.exists()) {
+                        for (snap in snapshot.children) {
                             val ticket = snap.getValue(TicketData::class.java)
                             if (ticket?.id == ticketData.id) {
-                                if (days > 0)
-                                {
+                                if (days < 0) {
                                     snap.ref.removeValue()
                                         .addOnSuccessListener {
                                             Navigation().Navigate(this@Ticket, Home::class.java)
-                                            Navigation().Message(this@Ticket,"تمت العملية بنجاح" )
-
+                                            Navigation().Message(this@Ticket, "تمت العملية بنجاح")
                                         }
 
-                                }
-                                else
-                                {
-                                    Navigation().Message(this@Ticket,"لا يمكن الغاء الحجز الا قبل 48 ساعة من موعد الرحلة" )
+                                } else {
+                                    Navigation().Message(
+                                        this@Ticket,
+                                        "لا يمكن الغاء الحجز الا قبل 24 ساعة من موعد الحجز"
+                                    )
                                 }
 
                             }
                         }
                     }
                 }
+
                 override fun onCancelled(error: DatabaseError) {
                     TODO("Not yet implemented")
                 }
             })
     }
 
-    fun generateQrCode(text: String?){
+    fun generateQrCode(text: String?) {
         val qrGenerator = QRGEncoder(text, null, QRGContents.Type.TEXT, 500)
         try {
             val bMap = qrGenerator.encodeAsBitmap()
-            im?.setImageBitmap(bMap)
-        } catch (e: Exception){
+            QRimage?.setImageBitmap(bMap)
+        } catch (e: Exception) {
             Log.e("Generate QR ", e.toString())
         }
     }

@@ -16,16 +16,16 @@
         android:theme="@style/Theme.MyTrain"
         tools:replace="android:supportsRtl,android:icon,android:theme">
         <activity
-            android:name=".Privacy"
+            android:name=".utils.Privacy"
             android:exported="false" />
         <activity
-            android:name=".conditions"
+            android:name=".utils.Conditions"
             android:exported="false" />
         <activity
-            android:name=".callUs"
+            android:name=".utils.CallUs"
             android:exported="false" />
         <activity
-            android:name=".WeAre"
+            android:name=".utils.AboutUs"
             android:exported="false" />
         <activity
             android:name=".payment.MyTicketsList"
@@ -34,9 +34,6 @@
             android:name=".UpdateData"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".Ticket_cancel"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -70,9 +67,6 @@
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
-        <activity
-            android:name=".Enquiry"
-            android:exported="true" />
         <activity
             android:name=".payment.TicketPicker"
             android:exported="true"

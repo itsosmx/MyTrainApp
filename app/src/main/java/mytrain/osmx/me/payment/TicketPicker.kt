@@ -98,7 +98,7 @@ class TicketPicker : BaseActivity() {
             intent.putExtra("date", et_travel_date.text.toString())
             intent.putExtra("traveler_number", s_traveller_number.selectedItem.toString())
             intent.putExtra("ticket_class", s_ticket_degree.selectedItem.toString())
-            intent.putExtra("travel_time", s_travel_time.selectedItem.toString())
+            intent.putExtra("start_time", s_travel_time.selectedItem.toString())
 
             if (et_travel_date.text.isEmpty() || s_traveller_number.isEmpty() || s_travel_time.isEmpty() || s_ticket_degree.isEmpty()) {
                 Navigation().Message(this, "ارجو ملئ كل البيانات")

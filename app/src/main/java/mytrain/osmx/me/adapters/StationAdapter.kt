@@ -33,7 +33,7 @@ class StationAdapter(private val stationList: ArrayList<StationData>, val intent
         val departureDate = intent.getStringExtra("date")
         val travelerNumber = intent.getStringExtra("traveler_number")
         val ticketClass = intent.getStringExtra("ticket_class")
-        val travelTime = intent.getStringExtra("travel_time")
+        val startTime = intent.getStringExtra("start_time")
 
         holder.tv_ticket_id.text = current.id
         holder.tv_ticket_arrival_time.text = current.arrivalTime
@@ -44,8 +44,7 @@ class StationAdapter(private val stationList: ArrayList<StationData>, val intent
         val timedPrice = current.price?.times(travelerNumber!!.toInt())
         val df = DecimalFormat("#.##")
         df.roundingMode = RoundingMode.UP
-        val calcPrice = df.format(timedPrice)
-
+        val calcPrice = df.format(timedPrice!!.toDouble().times(100))
 
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, TicketInfo::class.java)
@@ -54,7 +53,7 @@ class StationAdapter(private val stationList: ArrayList<StationData>, val intent
             intent.putExtra("departure_date", departureDate)
             intent.putExtra("traveler_number", travelerNumber)
             intent.putExtra("ticket_class", ticketClass)
-            intent.putExtra("travel_time", travelTime)
+            intent.putExtra("start_time", startTime)
             intent.putExtra("train_id", current.id.toString())
             intent.putExtra("arrival_time", current.arrivalTime)
             intent.putExtra("departure_time", current.departureTime)

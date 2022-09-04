@@ -4,7 +4,21 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class TrainData(
-    val latitude: String? = "0",
-    val longitude: String? = "0",
-    val tickets: Array<String>? = null
+    val latitude: Double?,
+    val longitude: Double?,
+    val seats: Int? = 100,
+    val unavailable: Int?,
+    val tickets: List<TicketPayload>? = null
+)
+
+@IgnoreExtraProperties
+data class TicketPayload(
+    val id: String?,
+    val seats: Int?
+)
+
+@IgnoreExtraProperties
+data class TicketUnavailableSeats(
+    val seats: Int? = 0,
+    val unavailable: Int? = 0
 )

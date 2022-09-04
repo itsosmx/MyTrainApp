@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import mytrain.osmx.me.*
 import mytrain.osmx.me.components.Navigation
+import mytrain.osmx.me.utils.AboutUs
+import mytrain.osmx.me.utils.CallUs
+import mytrain.osmx.me.utils.Conditions
+import mytrain.osmx.me.utils.Privacy
 
 class UserSettings : BaseActivity() {
     private lateinit var notification: Button
@@ -44,8 +48,7 @@ class UserSettings : BaseActivity() {
                 var shareMessage = "\n تطبيق قطاري لحجز تذاكر وتتبع قطارات سكك حديد مصر بطريقة سهلة !! \n\n"
                 shareMessage =
                     """
-                    ${shareMessage}https://play.google.com/store/apps/details?id=mytrain.osmx.me&hl=en-US&ah=GBf2-9R6RaMqR3CmGzrevwTc1yU${BuildConfig.APPLICATION_ID}
-                    
+                    ${shareMessage}https://play.google.com/store/apps/details?id=mytrain.osmx.me
                     """.trimIndent()
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
                 startActivity(Intent.createChooser(shareIntent, "choose one"))
@@ -55,31 +58,23 @@ class UserSettings : BaseActivity() {
         }
         who = findViewById(R.id.who)
         who.setOnClickListener {
-            Navigation().Navigate(this@UserSettings, WeAre::class.java)
+            Navigation().Navigate(this@UserSettings, AboutUs::class.java)
         }
 
         ranning = findViewById(R.id.ranning)
         ranning.setOnClickListener {
-            Navigation().Navigate(this@UserSettings, callUs::class.java)
+            Navigation().Navigate(this@UserSettings, CallUs::class.java)
         }
 
         conditions = findViewById(R.id.conditions)
         conditions.setOnClickListener {
-            Navigation().Navigate(this@UserSettings, mytrain.osmx.me.conditions::class.java)
+            Navigation().Navigate(this@UserSettings, Conditions::class.java)
         }
 
         privacy = findViewById(R.id.privacy)
         privacy.setOnClickListener {
             Navigation().Navigate(this@UserSettings, Privacy::class.java)
         }
-
-
-
-
-
-
-
-
 
     }
 }
