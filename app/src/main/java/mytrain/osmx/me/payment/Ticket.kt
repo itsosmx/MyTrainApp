@@ -88,7 +88,7 @@ class Ticket : AppCompatActivity() {
         }
 
 
-        generateQrCode(ticketData.id)
+        generateQrCode("\n  محطة القيام  \n " +ticketData.startStation+ "\n  محطة الوصول  \n " +ticketData.endStation+"  \nتاريخ القيام   \n\n "+ticketData.departureDate+"  \n \n وقت القيام   \n\n "+ticketData.departureTime+"\n\n Ticket ID \n "+ticketData.id)
 
     }
 

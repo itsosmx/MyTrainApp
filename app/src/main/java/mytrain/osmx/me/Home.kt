@@ -33,8 +33,8 @@ class Home : BaseActivity() {
             Navigation().Navigate(this@Home, TicketPicker::class.java)
         }
         btn_track.setOnClickListener {
-        Navigation().Message(this, "غير متاح حاليا")
-        //Navigation().Navigate(this@Home, Map::class.java)
+        //Navigation().Message(this, "غير متاح حاليا")
+        Navigation().Navigate(this@Home, Map::class.java)
         }
         btn_myTickets.setOnClickListener {
             Navigation().Navigate(this@Home, MyTicketsList::class.java)
