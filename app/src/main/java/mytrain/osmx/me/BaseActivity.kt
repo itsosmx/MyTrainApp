@@ -1,5 +1,7 @@
 package mytrain.osmx.me
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -56,11 +58,28 @@ open class BaseActivity : AppCompatActivity() {
                 true
             }
             R.id.nav_share -> {
-                Toast.makeText(this, "غير متاح حاليا", Toast.LENGTH_SHORT).show()
+                try {
+                    val shareIntent = Intent(Intent.ACTION_SEND)
+                    shareIntent.type = "text/plain"
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My Train || قطاري")
+                    var shareMessage = "\n تطبيق قطاري لحجز تذاكر وتتبع قطارات سكك حديد مصر بطريقة سهلة !! \n\n"
+                    shareMessage =
+                        """
+                    ${shareMessage}https://play.google.com/store/apps/details?id=mytrain.osmx.me
+                    """.trimIndent()
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+                    startActivity(Intent.createChooser(shareIntent, "choose one"))
+                } catch (e: Exception) {
+                    //e.toString();
+                }
                 true
             }
             R.id.nav_rate -> {
-                Toast.makeText(this, "غير متاح حاليا", Toast.LENGTH_SHORT).show()
+                var url =
+                    "https://play.google.com/store/apps/details?id=mytrain.osmx.me&hl=en-US&ah=GBf2-9R6RaMqR3CmGzrevwTc1yU";
+                startActivity(Intent(Intent.ACTION_VIEW).apply {
+                    data = Uri.parse(url)
+                })
                 true
             }
             R.id.nav_suggestions -> {
