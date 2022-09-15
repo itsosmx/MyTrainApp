@@ -19,6 +19,7 @@ class Suggestions : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_suggestions)
+        supportActionBar?.title = "المقترحات"
 
         b_submit = findViewById(R.id.b_submit)
         et_content_input = findViewById(R.id.et_content_input)

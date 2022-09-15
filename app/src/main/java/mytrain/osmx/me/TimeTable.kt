@@ -9,7 +9,7 @@ class TimeTable : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_time_table)
-    supportActionBar?.title = "الخدمات"
+    supportActionBar?.title = "أجندة المواعيد"
 
     }
 

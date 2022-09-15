@@ -13,6 +13,7 @@ class News : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
+        supportActionBar?.title = "الخدمات"
 
         b_table = findViewById(R.id.b_table)
 
